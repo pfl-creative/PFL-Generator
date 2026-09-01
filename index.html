@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="สร้างภาพนางแบบแฟชั่นและคอนเทนต์ร้านค้าเป็นเซ็ตด้วย AI ในคลิกเดียว ด้วยระบบ PFL Photoshoot Generator จาก Prompt Fashion Lab">
+  <title>PFL Photoshoot Generator | Prompt Fashion Lab</title>
+  
+  <!-- Vanilla CSS Style Sheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==========================================
+       HEADER / NAVIGATION
+       ========================================== -->
+  <header>
+    <div class="container header-container">
+      <a href="#" class="logo">
+        PROMPT FASHION <span>LAB</span>
+      </a>
+      <div class="brand-badge">PFL ✦ STUDIO</div>
+    </div>
+  </header>
+
+  <!-- ==========================================
+       SECTION 1 — HERO
+       ========================================== -->
+  <section id="hero" class="section-padding">
+    <div class="container hero-grid">
+      <div class="hero-content reveal active">
+        <div class="hero-tagline">
+          <span>AI FASHION PHOTOSHOOT, MADE SIMPLE</span> ✦
+        </div>
+        <h1 class="text-balance-thai hero-title">
+          Brief ครั้งเดียว<br>
+          ได้ภาพแฟชั่นทั้งเซ็ต
+        </h1>
+        <p class="text-balance-thai hero-desc">
+          Workflow สร้างภาพแฟชั่นด้วย AI ที่ช่วยให้คุณไม่ต้องเริ่มคิดใหม่ทีละภาพ แค่กำหนด Product, Model, Location, Mood และ Style ครั้งเดียว แล้วสร้าง Prompt สำหรับหลาย Shot ใน Photoshoot เดียวกัน
+        </p>
+        
+        <div class="hero-benefits-grid">
+          <div class="hero-benefit-item">
+            <h4>BRIEF ONCE</h4>
+            <p>ไม่ต้องเริ่มใหม่ทุกภาพ</p>
+          </div>
+          <div class="hero-benefit-item">
+            <h4>CREATE A SET</h4>
+            <p>ได้หลายมุม หลาย Shot</p>
+          </div>
+          <div class="hero-benefit-item">
+            <h4>SAVE TIME</h4>
+            <p>ทำ Content ได้เป็นระบบขึ้น</p>
+          </div>
+        </div>
+
+        <div class="hero-cta-wrap">
+          <a href="#offer" class="btn btn-black">สร้าง AI Photoshoot ของฉัน — 990.- →</a>
+          <div class="hero-price-anchor">
+            ราคาปกติ <span>3,990.-</span> วันนี้ <strong>990.-</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Visual Proof -->
+      <div class="hero-visual reveal active" style="transition-delay: 0.15s;">
+        <!-- Left Sidebar: Brief mock -->
+        <div class="brief-display">
+          <div class="brief-display-header">
+            <span>PHOTOSHOOT BRIEF</span>
+            <span style="color: var(--color-coral)">01 ✦</span>
+          </div>
+          <div class="brief-item">
+            <label>PRODUCT</label>
+            <span>Baby blue textured blouse</span>
+          </div>
+          <div class="brief-item">
+            <label>MODEL</label>
+            <span>Thai woman, 28</span>
+          </div>
+          <div class="brief-item">
+            <label>LOCATION</label>
+            <span>Minimal concrete café</span>
+          </div>
+          <div class="brief-item">
+            <label>MOOD</label>
+            <span>Quiet Luxury / Relaxed</span>
+          </div>
+          <div class="brief-item">
+            <label>STYLE</label>
+            <span>iPhone Lifestyle</span>
+          </div>
+          <div class="brief-item">
+            <label>LIGHT</label>
+            <span>Soft Natural Light</span>
+          </div>
+        </div>
+
+        <!-- Right Side: Contact Sheet preview -->
+        <div class="visual-sheet-area">
+          <div class="visual-sheet-header">
+            <h3>ONE BRIEF. <span class="italic-serif">A Whole Shoot.</span> ✦</h3>
+            <span>different shots</span>
+          </div>
+          
+          <div class="visual-sheet-grid">
+            <div class="visual-sheet-item">
+              <div class="visual-sheet-img-wrap">
+                <img src="images/shot_01.jpg" alt="01 WIDE SHOT">
+              </div>
+              <div class="visual-sheet-caption">
+                <span>01</span>
+                <span>WIDE</span>
+              </div>
+            </div>
+            <div class="visual-sheet-item">
+              <div class="visual-sheet-img-wrap">
+                <img src="images/shot_02.jpg" alt="02 MEDIUM SHOT">
+              </div>
+              <div class="visual-sheet-caption">
+                <span>02</span>
+                <span>MEDIUM</span>
+              </div>
+            </div>
+            <div class="visual-sheet-item">
+              <div class="visual-sheet-img-wrap">
+                <img src="images/shot_03.jpg" alt="03 CLOSE-UP">
+              </div>
+              <div class="visual-sheet-caption">
+                <span>03</span>
+                <span>CLOSE-UP</span>
+              </div>
+            </div>
+            <div class="visual-sheet-item">
+              <div class="visual-sheet-img-wrap">
+                <img src="images/shot_04.jpg" alt="04 CANDID">
+              </div>
+              <div class="visual-sheet-caption">
+                <span>04</span>
+                <span>CANDID</span>
+              </div>
+            </div>
+            <div class="visual-sheet-item">
+              <div class="visual-sheet-img-wrap">
+                <img src="images/shot_05.jpg" alt="05 DETAIL">
+              </div>
+              <div class="visual-sheet-caption">
+                <span>05</span>
+                <span>DETAIL</span>
+              </div>
+            </div>
+            <div class="visual-sheet-item">
+              <div class="visual-sheet-img-wrap">
+                <img src="images/shot_06.jpg" alt="06 HERO">
+              </div>
+              <div class="visual-sheet-caption">
+                <span>06</span>
+                <span>HERO</span>
+              </div>
+            </div>
+          </div>
+          
+          <div style="font-size: 0.65rem; opacity: 0.6; text-transform: uppercase; letter-spacing: 0.05em; text-align: center; margin-top: 0.25rem;">
+            same setting → different shots
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 2 — THE REAL PROBLEM
+       ========================================== -->
+  <section class="section-padding" style="background-color: var(--color-ivory); border-top: 1px solid rgba(32,32,32,0.08);">
+    <div class="container">
+      <div class="problem-header reveal">
+        <span class="tagline-badge" style="margin-bottom: 1rem;">SOUND FAMILIAR?</span>
+        <h2 class="text-balance-thai">
+          สร้างภาพ AI ทีละรูป<br>
+          <span>เสียเวลากว่าที่คิด</span>
+        </h2>
+      </div>
+
+      <div class="problem-grid-new reveal">
+        <!-- Step 1 -->
+        <div class="problem-step-card">
+          <div class="card-num">STEP 01</div>
+          <h3 class="text-balance-thai">คิด Concept</h3>
+          <p class="text-balance-thai">ร่างไอเดีย นึกคำ แล้วเขียน Prompt กดรันภาพใบแรก รอจนภาพคลอดออกมาแล้วปรับแต่ง</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="problem-step-card">
+          <div class="card-num">STEP 02</div>
+          <h3 class="text-balance-thai">คิดมุมใหม่</h3>
+          <p class="text-balance-thai">อยากได้รูปใกล้หรือมุมข้าง ต้องกลับไปแก้ประโยคเขียน Prompt อีกรอบ เพื่อให้ได้ภาพอีกมุม</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="problem-step-card">
+          <div class="card-num">STEP 03</div>
+          <h3 class="text-balance-thai">คิด Pose ใหม่...</h3>
+          <p class="text-balance-thai">พยายามจัดท่าทางใหม่ แต่อาจหลุดไปไกล ต้องเริ่มแก้คำและรันใหม่ซ้ำ ๆ จากจุดเริ่มต้น</p>
+          <div class="coral-annotation">again... and again...</div>
+        </div>
+      </div>
+
+      <div class="problem-loop-note reveal">
+        <h3 class="text-balance-thai">อยากได้ Content 6 รูป แต่ต้องเริ่มคิดใหม่เกือบ 6 รอบ</h3>
+        <p class="text-balance-thai">
+          และยิ่ง Generate แยกกันทีละภาพ นางแบบหรือโมเดลของคุณอาจจะเริ่มหน้าตาไม่เหมือนเดิม มู้ดโทนสีแสงอาจจะเปลี่ยน โลเคชันห้องวิวมุมอื่นอาจหลุดเฟรม จนแต่ละภาพดูเหมือนมาจากคนละ Photoshoot ใช้ด้วยกันไม่ได้
+        </p>
+      </div>
+
+      <div class="problem-close-banner reveal">
+        <h2 class="text-balance-thai">
+          เราเลยเปลี่ยนวิธีคิด จาก <span class="italic-serif" style="color: var(--color-coral)">"ทีละภาพ"</span> → เป็น <span class="italic-serif" style="color: var(--color-black)">"ทีละ Photoshoot"</span>
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 3 — THE NEW WORKFLOW
+       ========================================== -->
+  <section class="section-padding section-dark">
+    <div class="container">
+      <div style="max-width: 700px; margin-bottom: 3rem;">
+        <span class="eyebrow-yellow" style="color: var(--color-yellow); font-family: var(--font-grotesk); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">A BETTER WAY TO CREATE ✦</span>
+        <h2 class="text-balance-thai" style="margin-top: 0.75rem;">
+          อย่าคิดทีละรูป<br>
+          คิดเป็น Photoshoot
+        </h2>
+      </div>
+
+      <div class="workflow-grid reveal">
+        <!-- Old Way -->
+        <div class="workflow-side-box">
+          <h3>OLD WAY <span>1 IMAGE</span></h3>
+          
+          <div class="flow-step-item">
+            <div class="flow-num">01</div>
+            <div class="flow-step-content">
+              <h4>Think Concept</h4>
+              <p>คิดไอเดียและจินตนาการรูปภาพเดี่ยวที่จะทำทีละใบ</p>
+            </div>
+          </div>
+          <div class="flow-step-item">
+            <div class="flow-num">02</div>
+            <div class="flow-step-content">
+              <h4>Write Prompt</h4>
+              <p>เรียบเรียงคำค้นหาป้อนคำสั่ง AI ทีละหนึ่งคำสั่ง</p>
+            </div>
+          </div>
+          <div class="flow-step-item">
+            <div class="flow-num">03</div>
+            <div class="flow-step-content">
+              <h4>Generate</h4>
+              <p>กดสร้างภาพ รอผลลัพธ์ ปรับแก้จนกว่าจะได้ภาพเดี่ยวที่สวย</p>
+            </div>
+          </div>
+          <div class="flow-step-item">
+            <div class="flow-num">04</div>
+            <div class="flow-step-content">
+              <h4>Repeat × 6</h4>
+              <p>วนเริ่มทำซ้ำขั้นตอนเดิมตั้งแต่ขั้นตอนแรกสำหรับภาพใบถัดไป</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- PFL Way -->
+        <div class="workflow-side-box highlight">
+          <h3>PFL WAY <span style="background-color: var(--color-yellow); color: var(--color-black);">1 BRIEF</span></h3>
+          
+          <div class="flow-step-item">
+            <div class="flow-num">01</div>
+            <div class="flow-step-content">
+              <h4>Brief Once</h4>
+              <p>กรอกองค์ประกอบการถ่ายครั้งเดียวครอบคลุมทุกมิติหลัก:</p>
+              <ul>
+                <li>Product & Details</li>
+                <li>Model Profile</li>
+                <li>Location Scene</li>
+                <li>Mood, Tone, Style</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flow-step-item">
+            <div class="flow-num">02</div>
+            <div class="flow-step-content">
+              <h4>1 Photoshoot Plan</h4>
+              <p>Generator แตก Brief เดียวของคุณออกเป็นโครงร่างชุดคำสั่งครบเซ็ต:</p>
+              <ul>
+                <li>Wide View Shot</li>
+                <li>Medium Angle</li>
+                <li>Close-up Detail</li>
+                <li>Candid Outfit</li>
+              </ul>
+            </div>
+          </div>
+          <div class="flow-step-item">
+            <div class="flow-num">03</div>
+            <div class="flow-step-content">
+              <h4>A Complete Set ✦</h4>
+              <p>ได้ชุดภาพแฟชั่นที่คุมโทนสี ท่าทาง นางแบบ และหน้าตาเหมือนหลุดออกมาจากงานถ่ายเดียวกัน</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 4rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        <h4 class="text-balance-thai" style="color: var(--color-yellow); font-size: 1.3rem; margin-bottom: 1rem;">
+          Creative Direction เดียว แต่มีหลายมุมไว้ใช้ทำ Content
+        </h4>
+        <span class="italic-serif" style="font-size: 1.1rem; color: rgba(247, 243, 234, 0.4); text-transform: uppercase; letter-spacing: 0.1em;">
+          BRIEF ONCE. CREATE MORE.
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 4 — HOW IT WORKS
+       ========================================== -->
+  <section class="section-padding" style="background-color: var(--color-ivory);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <span class="tagline-badge">HOW IT WORKS</span>
+        <h2 class="text-balance-thai" style="margin-top: 1rem;">จาก Brief สู่ Prompt ทั้งเซ็ต</h2>
+      </div>
+
+      <div class="mechanism-grid reveal">
+        <!-- Step 1 -->
+        <div class="mechanism-card">
+          <div class="mechanism-num">01 / BRIEF</div>
+          <h3 class="text-balance-thai">ตอบคำถามครั้งเดียว</h3>
+          <p class="text-balance-thai">บอกข้อมูลเสื้อผ้าและมู้ดของภาพที่แบรนด์คุณอยากถ่าย:</p>
+          <ul>
+            <li>ชนิดและรายละเอียดสินค้า (Product)</li>
+            <li>ลุคและหน้าตาของแบบ (Model)</li>
+            <li>สถานที่หรือแบ็คกราวด์ (Location)</li>
+            <li>มู้ดแสง สี และสไตล์ภาพ (Mood & Style)</li>
+          </ul>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="mechanism-card">
+          <div class="mechanism-num">02 / BUILD THE SHOOT</div>
+          <h3 class="text-balance-thai"> Generator จัด Prompt</h3>
+          <p class="text-balance-thai">ระบบจะแปลงทิศทางสร้างสรรค์เป็นชุดคำสั่งทันที:</p>
+          <ul>
+            <li>วางชุด Shot ที่หลากหลายเชื่อมโยงกัน</li>
+            <li>คำนวณเลนส์กล้องและทิศทางแสงให้เข้ากัน</li>
+            <li>ใส่คีย์เวิร์ดควบคุมใบหน้านางแบบให้เสถียร</li>
+            <li>แยกเป็น WIDE, MEDIUM, CLOSE-UP, DETAIL</li>
+          </ul>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="mechanism-card">
+          <div class="mechanism-num">03 / GENERATE</div>
+          <h3 class="text-balance-thai">รันภาพแฟชั่นคุมโทน</h3>
+          <p class="text-balance-thai">นำชุด Prompt ที่จัดไว้ไปกดปุ่มรันภาพได้เลย:</p>
+          <ul>
+            <li>ใช้คู่กับ AI Workflow ที่เราแนะนำ</li>
+            <li>สร้างภาพหลายมุมคุม Mood&Tone เดียวกัน</li>
+            <li>เลือกเซฟภาพที่สวยที่สุดไปใช้งาน</li>
+            <li>ได้ Content พร้อมโพสต์ในไม่กี่นาที</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mechanism-summary reveal">
+        <h3 class="text-balance-thai" style="font-size: 1.5rem; margin-bottom: 0.5rem;">
+          1 BRIEF → MULTIPLE PROMPTS → A WHOLE SHOOT ✦
+        </h3>
+        <p class="italic-serif" style="color: var(--color-coral); font-weight: 600;">
+          ไม่ต้องเริ่มเขียนใหม่ทีละ Shot
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 5 — SHOW A REAL EXAMPLE (INTERACTIVE SIMULATOR)
+       ========================================== -->
+  <section class="section-padding section-dark" id="simulator">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <span class="eyebrow-yellow" style="color: var(--color-yellow); font-family: var(--font-grotesk); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">FROM BRIEF TO SHOOT</span>
+        <h2 class="text-balance-thai" style="margin-top: 0.75rem;">ลองดู 1 Photoshoot</h2>
+      </div>
+
+      <!-- Interactive Grid Simulator Container -->
+      <div class="simulator-container reveal">
+        
+        <!-- LEFT: INPUT BRIEF (Option pills) -->
+        <div class="sim-sidebar">
+          <div class="sim-title-area">
+            <span class="sim-step-label">STEP 01</span>
+            <h3 style="font-weight: 800; font-size: 1.2rem;">YOU ANSWER</h3>
+            <p style="font-size: 0.75rem; opacity: 0.6; margin-top: 0.25rem; color: rgba(247,243,234,0.6);">ลองคลิกเลือกปุ่มข้อมูลด้านล่างเพื่อเปลี่ยนมู้ดแอนด์โทนของเซ็ต Prompt</p>
+          </div>
+
+          <div class="brief-options">
+            <!-- 1. Product Selection -->
+            <div class="brief-option-group">
+              <label>1. Product / สินค้า</label>
+              <div class="pill-group">
+                <button onclick="selectOption('product', 'blouse', this)" class="pill pill-product active">เสื้อ Blouse สีฟ้า</button>
+                <button onclick="selectOption('product', 'dress', this)" class="pill pill-product">เดรส Satin สีครีม</button>
+              </div>
+            </div>
+
+            <!-- 2. Model Selection -->
+            <div class="brief-option-group">
+              <label>2. Model / นางแบบ</label>
+              <div class="pill-group">
+                <button onclick="selectOption('model', 'thai', this)" class="pill pill-model active">ผู้หญิงไทย อายุ 28</button>
+                <button onclick="selectOption('model', 'korean', this)" class="pill pill-model">นางแบบเกาหลี อายุ 23</button>
+              </div>
+            </div>
+
+            <!-- 3. Location Selection -->
+            <div class="brief-option-group">
+              <label>3. Location / สถานที่</label>
+              <div class="pill-group">
+                <button onclick="selectOption('location', 'cafe', this)" class="pill pill-location active">Minimal Café</button>
+                <button onclick="selectOption('location', 'studio', this)" class="pill pill-location">Concrete Studio</button>
+              </div>
+            </div>
+
+            <!-- 4. Mood & Style Selection -->
+            <div class="brief-option-group">
+              <label>4. Mood & Style / มู้ด & กล้อง</label>
+              <div class="pill-group">
+                <button onclick="selectOption('mood', 'luxury', this)" class="pill pill-mood active">Quiet Luxury, iPhone</button>
+                <button onclick="selectOption('mood', 'edgy', this)" class="pill pill-mood">Street Edgy, Flash</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Prompt Output Container -->
+          <div class="prompt-box">
+            <div class="prompt-box-header">
+              <span class="label">Sample Generated Prompt</span>
+              <span style="opacity: 0.4; color: var(--color-ivory);">Ready to use</span>
+            </div>
+            <div id="prompt-output-box" class="prompt-text">
+              Analog film fashion photography of a 28yo Thai woman wearing a light blue silk blouse, sitting in a minimal warm-ivory concrete cafe, relaxed quiet luxury mood, iPhone lifestyle camera angle, shot on 35mm, f/2.8 --ar 4:5
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: GENERATES (Photoshoot Grid/Contact Sheet) -->
+        <div class="contact-sheet-area">
+          <!-- Loading Overlay -->
+          <div id="loader" class="sim-loader">
+            <div class="spinner"></div>
+            <span style="font-size: 0.7rem; color: var(--color-yellow); text-transform: uppercase; font-weight: 700; letter-spacing: 0.1em;">
+              Applying parameters...
+            </span>
+          </div>
+
+          <div class="contact-sheet-header">
+            <div>
+              <span class="sim-step-label">STEP 02</span>
+              <h3 style="font-weight: 800; font-size: 1.2rem;">PFL GENERATES</h3>
+            </div>
+            <span class="italic-serif" style="color: var(--color-yellow); font-size: 0.95rem;">A unified photoshoot set</span>
+          </div>
+
+          <!-- Photo Grid -->
+          <div class="contact-sheet-grid">
+            <!-- Shot 01: Wide -->
+            <div class="sheet-item">
+              <div class="sheet-img-wrap">
+                <img id="img-wide" src="images/shot_01.jpg" alt="Wide shot">
+              </div>
+              <div class="sheet-caption">
+                <span>SHOT 01</span>
+                <span>WIDE</span>
+              </div>
+            </div>
+            
+            <!-- Shot 02: Medium -->
+            <div class="sheet-item">
+              <div class="sheet-img-wrap">
+                <img id="img-medium" src="images/shot_02.jpg" alt="Medium shot">
+              </div>
+              <div class="sheet-caption">
+                <span>SHOT 02</span>
+                <span>MEDIUM</span>
+              </div>
+            </div>
+
+            <!-- Shot 03: Close-up -->
+            <div class="sheet-item">
+              <div class="sheet-img-wrap">
+                <img id="img-closeup" src="images/shot_03.jpg" alt="Close-up shot">
+              </div>
+              <div class="sheet-caption">
+                <span>SHOT 03</span>
+                <span>CLOSE-UP</span>
+              </div>
+            </div>
+
+            <!-- Shot 04: Candid -->
+            <div class="sheet-item">
+              <div class="sheet-img-wrap">
+                <img id="img-candid" src="images/shot_04.jpg" alt="Candid shot">
+              </div>
+              <div class="sheet-caption">
+                <span>SHOT 04</span>
+                <span>CANDID</span>
+              </div>
+            </div>
+
+            <!-- Shot 05: Detail -->
+            <div class="sheet-item">
+              <div class="sheet-img-wrap">
+                <img id="img-detail" src="images/shot_05.jpg" alt="Detail shot">
+              </div>
+              <div class="sheet-caption">
+                <span>SHOT 05</span>
+                <span>DETAIL</span>
+              </div>
+            </div>
+
+            <!-- Shot 06: Hero -->
+            <div class="sheet-item">
+              <div class="sheet-img-wrap">
+                <img id="img-hero" src="images/shot_06.jpg" alt="Hero shot">
+              </div>
+              <div class="sheet-caption">
+                <span>SHOT 06</span>
+                <span>HERO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(247, 243, 234, 0.1);">
+        <h3 class="text-balance-thai" style="font-size: 1.8rem; margin-bottom: 0.5rem;">SAME CONCEPT. MORE CONTENT. ✦</h3>
+        <p class="text-balance-thai" style="opacity: 0.8; max-width: 600px; margin: 0 auto;">
+          จาก Photoshoot เดียว สามารถดาวน์โหลดภาพไปนำไปจัดหน้าใช้ต่อได้ทันที ทั้ง Instagram Carousel, Feed, Website, Ads โฆษณา หรือเลย์เอาท์ทำ Lookbook ของร้านค้า
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 6 — WHY A SET IS MORE USEFUL THAN ONE IMAGE
+       ========================================== -->
+  <section class="section-padding" style="background-color: var(--color-ivory);">
+    <div class="container">
+      <div style="max-width: 700px; margin-bottom: 3rem;">
+        <span class="tagline-badge">WHY A SET MATTERS</span>
+        <h2 class="text-balance-thai" style="margin-top: 1rem;">
+          เพราะแบรนด์ไม่ได้ต้องการ<br>
+          แค่ "รูปสวย 1 รูป"
+        </h2>
+        <p class="text-balance-thai" style="margin-top: 0.75rem; font-size: 1.25rem; font-weight: 500; color: var(--color-coral)">
+          แต่ต้องการ Content ที่ใช้ไปด้วยกันได้
+        </p>
+      </div>
+
+      <div class="benefit-use-grid reveal">
+        <!-- Case 1 -->
+        <div class="use-case-card">
+          <div>
+            <h3>INSTAGRAM CAROUSEL <span>01 / SOCIAL</span></h3>
+            <p style="font-size: 0.95rem; opacity: 0.8; margin-top: 0.5rem; margin-bottom: 1.25rem;">ลงโพสต์สไลด์ปัดขวาเล่าเรื่องคอลเลกชันได้น่าสนใจและมียอดแชร์สูงขึ้น</p>
+          </div>
+          <div class="use-case-flow">
+            <span>Hero Cover</span>
+            <span class="arrow">→</span>
+            <span>Lifestyle View</span>
+            <span class="arrow">→</span>
+            <span>Close-up Shot</span>
+            <span class="arrow">→</span>
+            <span>Fabric Detail</span>
+          </div>
+        </div>
+
+        <!-- Case 2 -->
+        <div class="use-case-card">
+          <div>
+            <h3>WEBSITE LAYOUT <span>02 / STOREFRONT</span></h3>
+            <p style="font-size: 0.95rem; opacity: 0.8; margin-top: 0.5rem; margin-bottom: 1.25rem;">จัดวางภาพบนหน้าร้านค้าออนไลน์หรือแบนเนอร์หลักให้ดูเป็นมืออาชีพ</p>
+          </div>
+          <div class="use-case-flow">
+            <span>Hero Cover Banner</span>
+            <span class="arrow">→</span>
+            <span>Product Catalog</span>
+            <span class="arrow">→</span>
+            <span>Texture Detail</span>
+          </div>
+        </div>
+
+        <!-- Case 3 -->
+        <div class="use-case-card">
+          <div>
+            <h3>CAMPAIGN PROMOTION <span>03 / ADS</span></h3>
+            <p style="font-size: 0.95rem; opacity: 0.8; margin-top: 0.5rem; margin-bottom: 1.25rem;">ยิงแอดโฆษณาด้วยรูปที่หลากหลายดึงความสนใจหลายระดับ</p>
+          </div>
+          <div class="use-case-flow">
+            <span>Wide Angle View</span>
+            <span class="arrow">→</span>
+            <span>Portrait Face</span>
+            <span class="arrow">→</span>
+            <span>Candid Dynamic Pose</span>
+          </div>
+        </div>
+
+        <!-- Case 4 -->
+        <div class="use-case-card">
+          <div>
+            <h3>DIGITAL LOOKBOOK <span>04 / BRAND BOOK</span></h3>
+            <p style="font-size: 0.95rem; opacity: 0.8; margin-top: 0.5rem; margin-bottom: 1.25rem;">สร้างหน้าโบรชัวร์แฟชั่นคุมธีมเสื้อผ้าเซ็ตใหญ่ลงขายส่งหรือแสดงผลงาน</p>
+          </div>
+          <div class="use-case-flow">
+            <span>Full Body Fit</span>
+            <span class="arrow">→</span>
+            <span>Medium Angle Shot</span>
+            <span class="arrow">→</span>
+            <span>Stitch Detail</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 4rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        <p class="text-balance-thai" style="font-weight: 500;">
+          Photoshoot Workflow ช่วยให้คุณคิด Content เป็นชุดตั้งแต่ต้น แทนที่จะนั่งคอยนั่งไล่ Generate รูปสวยแบบสะเปะสะปะ แยกกันไปเรื่อย ๆ โดยมองไม่เห็นภาพรวมของร้าน
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 7 — REALISM MATTERS
+       ========================================== -->
+  <section class="section-padding" style="background-color: var(--color-white); border-top: 1px solid rgba(32,32,32,0.08);">
+    <div class="container">
+      <div class="realism-header text-balance-thai reveal">
+        <span class="tagline-badge" style="margin-bottom: 1rem;">REALISM MATTERS</span>
+        <h2>ทำเร็วขึ้น แต่ภาพยังต้องดูดี</h2>
+      </div>
+
+      <div class="realism-grid reveal">
+        <!-- Skin -->
+        <div class="realism-card">
+          <div class="realism-img-wrap">
+            <img src="images/gallery_portrait.jpg" alt="Realistic Skin Texture">
+          </div>
+          <div class="realism-annotation">real skin</div>
+        </div>
+
+        <!-- Fabric -->
+        <div class="realism-card">
+          <div class="realism-img-wrap">
+            <img src="images/gallery_product_detail.jpg" alt="Fabric accuracy">
+          </div>
+          <div class="realism-annotation">fabric texture</div>
+        </div>
+
+        <!-- Light -->
+        <div class="realism-card">
+          <div class="realism-img-wrap">
+            <img src="images/gallery_lifestyle.jpg" alt="Natural Sunlight shadow">
+          </div>
+          <div class="realism-annotation">natural light</div>
+        </div>
+
+        <!-- Details -->
+        <div class="realism-card">
+          <div class="realism-img-wrap">
+            <img src="images/gallery_studio.jpg" alt="Studio details">
+          </div>
+          <div class="realism-annotation">believable details</div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 3.5rem; max-width: 650px; margin-left: auto; margin-right: auto;">
+        <p class="text-balance-thai" style="font-size: 1.05rem;">
+          PFL Workflow ให้ความสำคัญกับรายละเอียดของภาพแฟชั่น เพื่อช่วยให้ผลลัพธ์ดูเป็นธรรมชาติและลดความรู้สึกว่าเป็นภาพ AI โดยการออกแบบคำสั่งและทริคการควบคุมให้ภาพคุมองค์ประกอบความสมจริงได้สม่ำเสมอ
+        </p>
+        <p style="font-size: 0.85rem; opacity: 0.5; font-style: italic; margin-top: 0.75rem;">
+          * เราไม่อวดอ้างผลลัพธ์ว่าสมบูรณ์แบบ 100% ทุกครั้ง แต่เรานำเสนอระบบการทำงานที่พัฒนาขึ้นเพื่อเพิ่มความสม่ำเสมอและความสมจริงให้เสื้อผ้าคุณอย่างเต็มความสามารถ
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 8 — TIME SAVED
+       ========================================== -->
+  <section class="section-padding section-yellow">
+    <div class="container">
+      <div style="text-align: center;">
+        <span class="tagline-badge" style="background-color: var(--color-black); color: var(--color-yellow)">THE REAL BENEFIT</span>
+        <h2 class="text-balance-thai" style="margin-top: 1rem; font-size: clamp(1.8rem, 5vw, 2.6rem); line-height: 1.3;">
+          เวลาควรไปอยู่กับ Creative Direction<br>
+          <span style="color: var(--color-coral)">ไม่ใช่นั่งเริ่ม Prompt ใหม่ทุกภาพ</span>
+        </h2>
+      </div>
+
+      <div class="benefit-row reveal">
+        <div class="benefit-block">
+          <h3>LESS REPETITION</h3>
+          <p class="text-balance-thai">ไม่ต้องเริ่มสร้างชุด Brief องค์ประกอบใหม่สะเปะสะปะทีละรูป คิดทุกคำใหม่หมดทุก Shot</p>
+        </div>
+        <div class="benefit-block">
+          <h3>LESS THINKING</h3>
+          <p class="text-balance-thai">มีชุดและโครงสร้างกรอบวางกล้อง (Shot Structure) คอยช่วยไกด์รูปถ่ายใบถัดไปได้ทันที</p>
+        </div>
+        <div class="benefit-block">
+          <h3>MORE CONTENT</h3>
+          <p class="text-balance-thai">เปลี่ยนไอเดียตั้งต้น (One Concept) แตกสาขาออกเป็นหลายมุมได้เซ็ตภาพใหญ่ในครั้งเดียว</p>
+        </div>
+      </div>
+
+      <div style="text-align: center;">
+        <h2 class="italic-serif" style="font-size: clamp(1.8rem, 4.5vw, 2.5rem); letter-spacing: 0.05em; color: var(--color-black);">
+          LESS PROMPTING. MORE CREATING. ✦
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 9 — MADE FOR FASHION BRANDS
+       ========================================== -->
+  <section class="section-padding" style="background-color: var(--color-ivory); border-top: 1px solid rgba(32,32,32,0.08);">
+    <div class="container">
+      <div style="max-width: 750px; margin-bottom: 2rem;">
+        <span class="tagline-badge">MADE FOR FASHION</span>
+        <h2 class="text-balance-thai" style="margin-top: 1rem;">
+          ไม่ได้สร้างมาเพื่อ Generate รูปอะไรก็ได้<br>
+          <span style="color: var(--color-coral)">แต่คิดมาเพื่อ Fashion Content</span>
+        </h2>
+      </div>
+
+      <div class="categories-grid reveal">
+        <!-- 1 Studio -->
+        <div class="category-card">
+          <img src="images/sheet_studio.jpg" alt="STUDIO PHOTO">
+          <div class="category-overlay"><span>STUDIO</span></div>
+        </div>
+        <!-- 2 Street Style -->
+        <div class="category-card">
+          <img src="images/sheet_street.jpg" alt="STREET STYLE PHOTO">
+          <div class="category-overlay"><span>STREET STYLE</span></div>
+        </div>
+        <!-- 3 Café -->
+        <div class="category-card">
+          <img src="images/sheet_cafe.jpg" alt="CAFÉ PHOTO">
+          <div class="category-overlay"><span>CAFÉ</span></div>
+        </div>
+        <!-- 4 Influencer -->
+        <div class="category-card">
+          <img src="images/sheet_influencer.jpg" alt="INFLUENCER PHOTO">
+          <div class="category-overlay"><span>INFLUENCER</span></div>
+        </div>
+        <!-- 5 Editorial -->
+        <div class="category-card">
+          <img src="images/sheet_editorial.jpg" alt="EDITORIAL PHOTO">
+          <div class="category-overlay"><span>EDITORIAL</span></div>
+        </div>
+        <!-- 6 Product shot -->
+        <div class="category-card">
+          <img src="images/gallery_product.jpg" alt="PRODUCT SHOT">
+          <div class="category-overlay"><span>PRODUCT SHOT</span></div>
+        </div>
+        <!-- 7 Lifestyle -->
+        <div class="category-card">
+          <img src="images/sheet_lifestyle.jpg" alt="LIFESTYLE PHOTO">
+          <div class="category-overlay"><span>LIFESTYLE</span></div>
+        </div>
+        <!-- 8 Detail -->
+        <div class="category-card">
+          <img src="images/gallery_detail.jpg" alt="PRODUCT DETAIL PHOTO">
+          <div class="category-overlay"><span>PRODUCT DETAIL</span></div>
+        </div>
+      </div>
+
+      <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px dashed rgba(32,32,32,0.2);">
+        <p class="text-balance-thai" style="font-weight: 500; font-size: 1.1rem; line-height: 1.7;">
+          เพราะภาพถ่ายแบบแฟชั่นของร้าน ไม่ได้ต้องการแค่ส่งคำสั่งว่า "นางแบบใส่เสื้อยืด" แต่มันขึ้นอยู่กับองค์ประกอบยิบย่อยที่มีมิติความงาม เช่น มุมมองเลนส์ (Camera Angle), ท่าโพส (Pose), การจัดวางเฟรม (Composition), ดีเทลงานฝีเข็มของเนื้อผ้า (Fabric Detail), ทิศทางมองกล้อง (Model Direction), ทิศแสงธรรมชาติ (Lighting), วิวสภาพแวดล้อม (Location) และอารมณ์ความเก๋ (Mood & Tone)
+        </p>
+        <p class="text-balance-thai" style="margin-top: 1rem; opacity: 0.8;">
+          ซึ่งตัว PFL Photoshoot Generator จะช่วยจัดการโครงสร้างข้อมูลภาพทั้งหมดเหล่านั้นมารวมกัน เพื่อสร้างทิศทางการ Brief ภาพถ่ายเสื้อผ้าของแบรนด์คุณให้ง่าย สมบูรณ์ และมีระบบขึ้นโดยทันที
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 10 — SIMPLE & AFFORDABLE
+       ========================================== -->
+  <section class="section-padding section-dark">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3rem;">
+        <h2 class="text-balance-thai">ง่ายพอให้ใช้จริง ประหยัดพอให้ใช้บ่อย</h2>
+      </div>
+
+      <div class="afford-grid reveal">
+        <!-- 1 Easy -->
+        <div class="afford-card">
+          <h3>EASY</h3>
+          <p class="text-balance-thai"><strong>ใช้ภาษาไทยในระบบได้สบาย</strong> ไม่จำเป็นต้องเรียบเรียงภาษาอังกฤษยาวเป็นหน้ากระดาษ ไม่ต้องจดจำรหัสโค้ดเทคนิคคอมพิวเตอร์ และไม่ต้องเรียนคำศัพท์วงการ AI ซับซ้อนจนชวนปวดหัว</p>
+        </div>
+
+        <!-- 2 Affordable -->
+        <div class="afford-card">
+          <h3>AFFORDABLE</h3>
+          <p class="text-balance-thai"><strong>งบเริ่มต้นสำหรับ AI ที่แนะนำใช้สร้างภาพแฟชั่นไม่ถึง 300 บาท/เดือน</strong> ไม่มีความจำเป็นต้องใช้ AI ที่ Subscription แพง</p>
+        </div>
+
+        <!-- 3 Beginner -->
+        <div class="afford-card">
+          <h3>BEGINNER FRIENDLY</h3>
+          <p class="text-balance-thai"><strong>ไม่มีทักษะหรือความรู้ดั้งเดิมก็ทำตามได้</strong> กระบวนการสร้างถูกออกแบบและเรียบเรียงมาให้ผู้เริ่มสนใจศึกษาเข้าใจง่ายที่สุด สามารถหยิบไปเรียนรู้และรันภาพจริงใช้งานได้ทันที</p>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 4rem;">
+        <span class="italic-serif" style="color: var(--color-yellow); font-size: 1.15rem; letter-spacing: 0.05em; text-transform: uppercase;">
+          made for brand owners, not AI experts. ✦
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 11 — WHO IS THIS FOR?
+       ========================================== -->
+  <section class="section-padding" style="background-color: var(--color-ivory);">
+    <div class="container">
+      <div style="text-align: center;">
+        <h2 class="text-balance-thai">
+          PFL Photoshoot Generator<br>
+          เหมาะกับคุณไหม?
+        </h2>
+      </div>
+
+      <div class="audience-container reveal">
+        <ul class="audience-list">
+          <li class="text-balance-thai">ทำ Content เสื้อผ้าโปรโมตร้านเสื้อผ้าลงสื่อออนไลน์เป็นประจำทุกสัปดาห์</li>
+          <li class="text-balance-thai">ต้องการเซ็ตภาพถ่ายที่คุมคาแรคเตอร์ โลเคชัน และมู้ดแสงสวยงามต่อเนื่องใน 1 คอนเซปต์</li>
+          <li class="text-balance-thai">เบื่อการต้องมาคอยคิดคีย์คำสั่ง (Prompt) และเริ่มพิมพ์คำใหม่จากศูนย์เมื่อขยับเปลี่ยนภาพถ่าย</li>
+          <li class="text-balance-thai">ต้องการผลิตภาพนำไปทำโพสต์ปัดขวา Carousel, แบนเนอร์เปิดตัวเว็บแคมเปญ หรือภาพ Lookbook ร้าน</li>
+          <li class="text-balance-thai">ชอบทดลองทดสอบภาพสินค้าในโลเคชันแปลกใหม่ มู้ดเท่ ๆ หรือเปลี่ยนโทนสีแสงเพื่อตามเทรนด์</li>
+          <li class="text-balance-thai">อยากเพิ่มกระบวนการสร้างและประหยัดระยะเวลาทุ่นแรง โดยลดกระบวนการผลิตงานหลังบ้านให้จบลงไว</li>
+          <li class="text-balance-thai">ไม่มีแบรนด์เสื้อผ้าทีมใหญ่ งบประมาณมีขีดจำกัด แต่ต้องการสร้างคอนเทนต์คุณภาพสม่ำเสมอ</li>
+          <li class="text-balance-thai">อยากเริ่มต้นสัมผัสและนำวิทยาการสร้างภาพ AI มาขัดเกลาแบรนด์แบบตรงจุด ไร้ขั้นตอนซับซ้อน</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 12 — MAIN OFFER
+       ========================================== -->
+  <section class="section-padding offer-section" id="offer">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 3.5rem;">
+        <span class="tagline-badge" style="background-color: var(--color-black); color: var(--color-yellow)">READY TO CREATE? ✦</span>
+      </div>
+
+      <!-- Spacious sales card -->
+      <div class="offer-card reveal">
+        <!-- Slow blinking Limited time badge -->
+        <div class="limited-time-badge">✦ LIMITED TIME OFFER</div>
+        
+        <h2>PFL Photoshoot Generator</h2>
+        <div class="offer-tagline">Your AI Fashion Photoshoot Workflow</div>
+        
+        <div class="offer-statement text-balance-thai">
+          Brief ครั้งเดียว สร้าง Content ได้ทั้งเซ็ต
+        </div>
+
+        <div class="price-box">
+          <span class="price-original-sales">ราคาปกติ 3,990.-</span>
+          <div class="price-current-sales">990.- <span>THB</span></div>
+        </div>
+
+        <ul class="offer-features">
+          <li class="text-balance-thai">Photoshoot Workflow ที่ง่าย แต่ได้ภาพสมจริง ในงบเบา ๆ</li>
+          <li class="text-balance-thai">ป้อนข้อมูลเป็นภาษาไทยก็ได้</li>
+          <li class="text-balance-thai">สร้าง Prompt ครบทั้งเซ็ตด้วย Brief เพียงครั้งเดียว</li>
+          <li class="text-balance-thai">Shot ครบถ้วนพร้อมใช้ - ได้มุม Wide, Medium, Close-up, Candid, Detail, etc.</li>
+          <li class="text-balance-thai">สร้างสรรค์เซ็ตภาพใหม่ได้ไม่สิ้นสุด</li>
+          <li class="text-balance-thai">Mini Guide & Walkthrough สอนวิธีใช้งานตั้งแต่กดเปิดครั้งแรก</li>
+        </ul>
+
+        <!-- FREE BONUS CALLOUT -->
+        <div class="offer-bonus-box" style="margin-bottom: 2rem; border: 2px dashed var(--color-coral); background-color: rgba(241, 107, 85, 0.04); padding: 1.5rem 1.25rem; width: 100%; text-align: left; position: relative;">
+          <span style="font-family: var(--font-grotesk); font-size: 0.65rem; font-weight: 800; background-color: var(--color-coral); color: var(--color-white); padding: 0.25rem 0.5rem; letter-spacing: 0.05em; display: inline-block; margin-bottom: 0.5rem; border: 1.5px solid var(--color-black); box-shadow: 2px 2px 0 var(--color-black);">✦ FREE BONUS</span>
+          <h4 class="text-balance-thai" style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.35rem; color: var(--color-black);">แถมฟรี !! AI Prompts Starter Kit (มูลค่า 299.-)</h4>
+          <p class="text-balance-thai" style="font-size: 0.95rem; opacity: 0.85; color: var(--color-black); line-height: 1.4;">สอนพื้นฐานการเขียน Prompt สร้างภาพแฟชั่นให้ได้ภาพที่สมจริง</p>
+        </div>
+
+        <div class="offer-cta-container">
+          <a href="https://buy.stripe.com/7sYbJ10VP1DbcYV2BhcIE03" class="btn btn-black">เริ่มสร้าง AI Photoshoot — 990.- →</a>
+          <span class="offer-microcopy">จ่ายครั้งเดียวสำหรับสิทธิ์เข้าใช้งาน PFL Photoshoot Generator ตลอดชีพ</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 13 — FAQ
+       ========================================== -->
+  <section class="section-padding" style="background-color: var(--color-ivory);">
+    <div class="container">
+      <div class="faq-header">
+        <span class="tagline-badge" style="margin-bottom: 1rem;">QUESTIONS? WE GOT YOU.</span>
+        <h2>ก่อนเริ่ม มีอะไรอยากรู้ไหม?</h2>
+      </div>
+
+      <div class="faq-list reveal">
+        <!-- Q1 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span>PFL Photoshoot Generator คืออะไร?</span>
+            <span class="faq-icon-wrap">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>PFL Photoshoot Generator เป็น Workflow ที่ช่วยเปลี่ยน Photoshoot Brief ของคุณให้กลายเป็น Prompt หลาย Shot สำหรับสร้างภาพแฟชั่นเป็นเซ็ตค่ะ</p>
+              <p>แทนที่จะเริ่มคิดและเขียนใหม่ทีละภาพ คุณสามารถกำหนด Product, Model, Location, Mood และ Style ครั้งเดียว แล้วนำ Prompt ที่ได้ไป Generate ภาพหลายมุมภายใต้ Creative Direction เดียวกัน</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q2 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span>Generator สร้างภาพให้เลยหรือไม่?</span>
+            <span class="faq-icon-wrap">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p><strong>ตัว Generator ไม่ได้เป็นตัวสร้างรูปภาพขึ้นมาโดยตรงค่ะ</strong> แต่ทำหน้าที่เป็นตัวช่วยวางแบบแปลนถ่ายรูปและเรียบเรียงชุดคำสั่ง Prompt คุณภาพสูงจากไอเดีย Brief ของคุณ</p>
+              <p>หลังจากนั้น คุณสามารถนำข้อความชุด Prompt ดังกล่าวคัดลอก (Copy) ไปส่งคำสั่งใช้งานกับระบบ AI Image Generator ในการวาดภาพออกมาตามแนวทาง (Workflow) ที่มี Mini Guide แนะนำไว้ให้ค่ะ</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q3 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span>มือใหม่ไม่มีพื้นฐาน AI ใช้ได้ไหม?</span>
+            <span class="faq-icon-wrap">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>ใช้งานได้แน่นอนค่ะ!</p>
+              <p>ตัว Workflow ถูกดีไซน์มาสำหรับพ่อค้าแม่ค้าออนไลน์มือใหม่โดยตรง ไม่มีความจำเป็นต้องมีทักษะคอมพิวเตอร์เขียนโปรแกรม ไม่ต้องท่องศัพท์คำศัพท์ย่อของวงการเทคโนโลยี และระบบรองรับการใช้ภาษาไทยเขียนอธิบายรายละเอียดสินค้าเบื้องต้นได้ทันที มี Mini Guide / Walkthrough แบบวิดีโออธิบายเข้าใจง่ายคอยนำเสนอทีละขั้นตอนค่ะ</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q4 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span>ต้องเสียค่า AI Subscription เพิ่มไหม?</span>
+            <span class="faq-icon-wrap">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>PFL Photoshoot Generator และแพลตฟอร์มผู้ให้บริการ AI สร้างภาพทำงานแยกออกเป็นคนละส่วนกันค่ะ</p>
+              <p>คุณสามารถเริ่มทดลองทำจริงผ่านแพ็กเกจแบบฟรี (Free Package) ของแพลตฟอร์มที่เราคัดเลือกมาแนะนำไว้ได้ก่อน แต่อาจมีขีดจำกัดโควตาจำนวนภาพ หรือฟังก์ชันเสริมบางตัว</p>
+              <p>หากเริ่มสร้างจริงจังในภายหลัง สามารถเปลี่ยนเป็นแพ็กเกจจ่ายรายเดือนสำหรับงานปริมาณมาก โดยมีแพลตฟอร์มแนะนำในราคาประหยัดงบประเมินเฉลี่ยต่ำกว่า 300 บาทต่อเดือนค่ะ</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q5 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span>Brief ครั้งเดียวแล้วภาพจะเหมือนกันทุกภาพเลยไหม?</span>
+            <span class="faq-icon-wrap">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>ระบบถูกวางกรอบการกรอกข้อมูลมาเพื่อทำให้แต่ละ Prompt ปลายทางยึดอยู่ภายใต้โครงสร้างเดียวกันเสถียรที่สุด เช่น หน้าตานางแบบ ลุคเสื้อผ้า สถานที่ มู้ดสีแสง และรายละเอียดองค์ประกอบโดยรวม</p>
+              <p>อย่างไรก็ตาม เนื่องจากตัววาดภาพ AI ทำงานโดยอิงหลักสถิติเชิงความน่าจะเป็น ทิศทางผลลัพธ์ของภาพถ่ายบางใบอาจมีจุดคลาดเคลื่อนของสีหน้าหรือรายละเอียดเสื้อผ้าบ้างตามธรรมชาติของภาพระบบนี้ ซึ่งในคู่มือเรียนรู้จะเสนอวิธีสร้างซ้ำหรือขัดเกลาภาพปรับปรุงรายละเอียดให้ได้ผลลัพธ์ที่สมบูรณ์ที่สุดค่ะ</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q6 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span>AI พัฒนาเร็ว Workflow นี้จะใช้ได้นานแค่ไหน?</span>
+            <span class="faq-icon-wrap">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>เราเล็งเห็นการเปลี่ยนแปลงที่ไวอย่างก้าวกระโดดของระบบปัญญาประดิษฐ์อยู่เสมอค่ะ</p>
+              <p>หากเครื่องมือ AI หลัก ๆ มีเวอร์ชันการอัปเกรดสำคัญ หรือมีช่องทางรวมตัวช่วยคำสั่ง Workflow ใหม่ที่ทำให้ผลภาพของคุณออกมาดูสมจริงกว่าเดิม สะดวกขึ้น หรือประหยัดต้นทุนลง ทางทีมงานจะทำการปรับเปลี่ยนข้อชี้แนะคำสอนภายใน Mini Guide / Workflow ให้มีคุณภาพล่าสุดอยู่เสมอ พร้อมจัดเตรียมการแจ้งข่าวอัปเดตช่องทางรับชมและเนื้อหาชี้แนะเวอร์ชันอัปเกรดตัวใหม่ส่งให้คุณโดยตรงผ่าน Email ค่ะ</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q7 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span>ภาพที่สร้างนำไปใช้เชิงพาณิชย์ได้ไหม?</span>
+            <span class="faq-icon-wrap">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>Prompt และคู่มือกระบวนการสร้างจาก PFL สามารถใช้เพื่อการผลิตสื่อโปรโมตสินค้าให้ร้านค้าของคุณได้ตามอัธยาศัยค่ะ</p>
+              <p>อย่างไรก็ตาม ลิขสิทธิ์และสิทธิ์ขาดทางการจดสิทธิ์เครื่องหมายการค้าเพื่อพาณิชย์ของปลายทางภาพที่คุณเจนออกมา จะขึ้นอยู่กับข้อกำหนดบริการของแต่ละแอปพลิเคชัน AI แพลตฟอร์มที่คุณเลือกใช้เจนรูปภาพ ดังนั้นจึงควรตรวจสอบแพ็กเกจและข้อตกลง (Terms of Service) ของแพลตฟอร์มนั้นควบคู่ด้วยเสมอค่ะ</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Q8 -->
+        <div class="faq-item">
+          <button class="faq-question-btn">
+            <span>ถ้าติดปัญหาต้องทำอย่างไร?</span>
+            <span class="faq-icon-wrap">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>สามารถทักข้อความ Inbox แชทเพจ หรือส่งข้อมูลสอบถามมาหาเราทาง Email ของทีม Prompt Fashion Lab ได้ทุกเมื่อค่ะ เราพร้อมคอยสแตนด์บายช่วยให้คำปรึกษาเพื่อซัพพอร์ตให้ผลงานของแบรนด์คุณสำเร็จออกมาด้วยดีค่ะ</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       SECTION 14 — FINAL CTA
+       ========================================== -->
+  <section class="section-padding final-cta">
+    <div class="container final-cta-grid">
+      <div class="final-content reveal">
+        <span class="final-eyebrow">YOUR NEXT SHOOT STARTS HERE ✦</span>
+        <h2 class="text-balance-thai final-title">
+          ครั้งหน้าไม่ต้อง<br>
+          เริ่มคิดใหม่ทีละภาพ
+        </h2>
+        <p class="text-balance-thai final-desc">
+          Brief Concept ครั้งเดียว แล้วสร้าง Prompt หลาย Shot สำหรับ Content ทั้งเซ็ตเหมือนระบบจำลองสตูดิโอขนาดจริง
+        </p>
+
+        <div class="final-equation">
+          <span>1 BRIEF</span>
+          <span class="arrow">↓</span>
+          <span>MULTIPLE SHOTS</span>
+          <span class="arrow">↓</span>
+          <span>MORE CONTENT</span>
+        </div>
+
+        <div class="final-offer-box">
+          <span class="product-label">PFL Photoshoot Generator</span>
+          <div class="final-price-tag">990.-</div>
+        </div>
+
+        <div style="max-width: 400px; margin-top: 1rem;">
+          <a href="https://buy.stripe.com/7sYbJ10VP1DbcYV2BhcIE03" class="btn btn-yellow" style="width: 100%;">เริ่มสร้าง Photoshoot ของฉัน →</a>
+        </div>
+
+        <div class="italic-serif" style="margin-top: 1rem; opacity: 0.5; font-size: 1rem; letter-spacing: 0.05em; text-transform: uppercase;">
+          BRIEF ONCE. CREATE MORE. ✦
+        </div>
+      </div>
+
+      <!-- Side Collage -->
+      <div class="final-collage reveal" style="transition-delay: 0.15s;">
+        <div class="final-img">
+          <img src="images/final_cta_1.jpg" alt="PFL AI Fashion Shoot Sample 1">
+        </div>
+        <div class="final-img">
+          <img src="images/final_cta_2.jpg" alt="PFL AI Fashion Shoot Sample 2">
+        </div>
+        <div class="final-img">
+          <img src="images/final_cta_3.jpg" alt="PFL AI Fashion Shoot Sample 3">
+        </div>
+        <div class="final-img">
+          <img src="images/final_cta_4.jpg" alt="PFL AI Fashion Shoot Sample 4">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
+       FOOTER
+       ========================================== -->
+  <footer>
+    <div class="container footer-container">
+      <div class="footer-copy">
+        <span class="footer-brand">PROMPT FASHION LAB</span>
+        <span>&copy; 2026 Prompt Fashion Lab. All rights reserved.</span>
+      </div>
+      <div class="footer-links">
+        <a href="#hero">Back to Top</a>
+        <a href="#simulator">Simulator</a>
+        <a href="#offer">Offer</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       STICKY MOBILE CTA
+       ========================================== -->
+  <div id="stickyMobileCta" class="sticky-mobile-cta">
+    <div class="sticky-info">
+      <div class="sticky-title">PFL Photoshoot Generator</div>
+      <div class="sticky-price">ราคา 990.-</div>
+    </div>
+    <a href="#offer" class="sticky-btn">เริ่มสร้างเลย →</a>
+  </div>
+
+  <!-- Script Import -->
+  <script src="script.js"></script>
+</body>
+</html>
