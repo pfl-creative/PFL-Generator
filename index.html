@@ -182,6 +182,182 @@
   </section>
 
   <!-- ==========================================
+       INTERACTIVE SIMULATOR — แค่ Brief ครั้งเดียว ได้ 7-9 Prompt
+       ========================================== -->
+  <section class="section-padding section-dark" id="simulator">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <span class="eyebrow-yellow" style="color: var(--color-yellow); font-family: var(--font-grotesk); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">FROM BRIEF TO SHOOT</span>
+        <h2 class="text-balance-thai" style="margin-top: 0.75rem;">แค่ Brief ครั้งเดียว ได้ 7-9 Prompt</h2>
+        <ul class="simulator-bullet-list">
+          <li class="text-balance-thai">พร้อม Copy&amp;Paste &gt; Generate</li>
+          <li class="text-balance-thai">ได้ภาพทั้งเซ็ตใน Theme เดียวกัน</li>
+          <li class="text-balance-thai">คิดโพส คิดมุมกล้องที่หลากหลายให้</li>
+          <li class="text-balance-thai">ไม่ต้องแก้ Prompt เองทีละอัน</li>
+        </ul>
+
+      </div>
+
+      <!-- Interactive Grid Simulator Container -->
+      <div class="simulator-container reveal">
+        
+        <!-- LEFT: INPUT BRIEF (Option pills) -->
+        <div class="sim-sidebar">
+          <div class="sim-title-area">
+            <span class="sim-step-label">STEP 01</span>
+            <h3 style="font-weight: 800; font-size: 1.2rem;">YOU ANSWER</h3>
+            <p style="font-size: 0.75rem; opacity: 0.6; margin-top: 0.25rem; color: rgba(247,243,234,0.6);">ลองคลิกเลือกปุ่มข้อมูลด้านล่างเพื่อเปลี่ยนมู้ดแอนด์โทนของเซ็ต Prompt</p>
+          </div>
+
+          <div class="brief-options">
+            <!-- 1. Product Selection -->
+            <div class="brief-option-group">
+              <label>1. Product / สินค้า</label>
+              <div class="pill-group">
+                <button onclick="selectOption('product', 'blouse', this)" class="pill pill-product active">เสื้อ Blouse สีฟ้า</button>
+                <button onclick="selectOption('product', 'dress', this)" class="pill pill-product">เดรส Satin สีครีม</button>
+              </div>
+            </div>
+
+            <!-- 2. Model Selection -->
+            <div class="brief-option-group">
+              <label>2. Model / นางแบบ</label>
+              <div class="pill-group">
+                <button onclick="selectOption('model', 'thai', this)" class="pill pill-model active">ผู้หญิงไทย อายุ 28</button>
+                <button onclick="selectOption('model', 'korean', this)" class="pill pill-model">นางแบบเกาหลี อายุ 23</button>
+              </div>
+            </div>
+
+            <!-- 3. Location Selection -->
+            <div class="brief-option-group">
+              <label>3. Location / สถานที่</label>
+              <div class="pill-group">
+                <button onclick="selectOption('location', 'cafe', this)" class="pill pill-location active">Minimal Café</button>
+                <button onclick="selectOption('location', 'studio', this)" class="pill pill-location">Concrete Studio</button>
+              </div>
+            </div>
+
+            <!-- 4. Mood & Style Selection -->
+            <div class="brief-option-group">
+              <label>4. Mood & Style / มู้ด & กล้อง</label>
+              <div class="pill-group">
+                <button onclick="selectOption('mood', 'luxury', this)" class="pill pill-mood active">Quiet Luxury, iPhone</button>
+                <button onclick="selectOption('mood', 'edgy', this)" class="pill pill-mood">Street Edgy, Flash</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Prompt Output Container -->
+          <div class="prompt-box">
+            <div class="prompt-box-header">
+              <span class="label">Sample Generated Prompt</span>
+              <span style="opacity: 0.4; color: var(--color-ivory);">Ready to use</span>
+            </div>
+            <div id="prompt-output-box" class="prompt-text">
+              Analog film fashion photography of a 28yo Thai woman wearing a light blue silk blouse, sitting in a minimal warm-ivory concrete cafe, relaxed quiet luxury mood, iPhone lifestyle camera angle, shot on 35mm, f/2.8 --ar 4:5
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: GENERATES (Photoshoot Grid/Contact Sheet) -->
+        <div class="contact-sheet-area">
+          <!-- Loading Overlay -->
+          <div id="loader" class="sim-loader">
+            <div class="spinner"></div>
+            <span style="font-size: 0.7rem; color: var(--color-yellow); text-transform: uppercase; font-weight: 700; letter-spacing: 0.1em;">
+              Applying parameters...
+            </span>
+          </div>
+
+          <div class="contact-sheet-header">
+            <div>
+              <span class="sim-step-label">STEP 02</span>
+              <h3 style="font-weight: 800; font-size: 1.2rem;">PFL GENERATES</h3>
+            </div>
+            <span class="italic-serif" style="color: var(--color-yellow); font-size: 0.95rem;">A unified photoshoot set</span>
+          </div>
+
+          <!-- Photo Grid -->
+          <div class="contact-sheet-grid">
+            <!-- Shot 01: Wide -->
+            <div class="sheet-item">
+              <div class="sheet-img-wrap">
+                <img id="img-wide" src="images/shot_01.jpg" alt="Wide shot">
+              </div>
+              <div class="sheet-caption">
+                <span>SHOT 01</span>
+                <span>WIDE</span>
+              </div>
+            </div>
+            
+            <!-- Shot 02: Medium -->
+            <div class="sheet-item">
+              <div class="sheet-img-wrap">
+                <img id="img-medium" src="images/shot_02.jpg" alt="Medium shot">
+              </div>
+              <div class="sheet-caption">
+                <span>SHOT 02</span>
+                <span>MEDIUM</span>
+              </div>
+            </div>
+
+            <!-- Shot 03: Close-up -->
+            <div class="sheet-item">
+              <div class="sheet-img-wrap">
+                <img id="img-closeup" src="images/shot_03.jpg" alt="Close-up shot">
+              </div>
+              <div class="sheet-caption">
+                <span>SHOT 03</span>
+                <span>CLOSE-UP</span>
+              </div>
+            </div>
+
+            <!-- Shot 04: Candid -->
+            <div class="sheet-item">
+              <div class="sheet-img-wrap">
+                <img id="img-candid" src="images/shot_04.jpg" alt="Candid shot">
+              </div>
+              <div class="sheet-caption">
+                <span>SHOT 04</span>
+                <span>CANDID</span>
+              </div>
+            </div>
+
+            <!-- Shot 05: Detail -->
+            <div class="sheet-item">
+              <div class="sheet-img-wrap">
+                <img id="img-detail" src="images/shot_05.jpg" alt="Detail shot">
+              </div>
+              <div class="sheet-caption">
+                <span>SHOT 05</span>
+                <span>DETAIL</span>
+              </div>
+            </div>
+
+            <!-- Shot 06: Hero -->
+            <div class="sheet-item">
+              <div class="sheet-img-wrap">
+                <img id="img-hero" src="images/shot_06.jpg" alt="Hero shot">
+              </div>
+              <div class="sheet-caption">
+                <span>SHOT 06</span>
+                <span>HERO</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(247, 243, 234, 0.1);">
+        <h3 class="text-balance-thai" style="font-size: 1.8rem; margin-bottom: 0.5rem;">SAME CONCEPT. MORE CONTENT. ✦</h3>
+        <p class="text-balance-thai" style="opacity: 0.8; max-width: 600px; margin: 0 auto;">
+          จาก Photoshoot เดียว สามารถดาวน์โหลดภาพไปนำไปจัดหน้าใช้ต่อได้ทันที ทั้ง Instagram Carousel, Feed, Website, Ads โฆษณา หรือเลย์เอาท์ทำ Lookbook ของร้านค้า
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================
        SECTION 2 — THE REAL PROBLEM
        ========================================== -->
   <section class="section-padding" style="background-color: var(--color-ivory); border-top: 1px solid rgba(32,32,32,0.08);">
@@ -389,175 +565,6 @@
         </h3>
         <p class="italic-serif" style="color: var(--color-coral); font-weight: 600;">
           ไม่ต้องเริ่มเขียนใหม่ทีละ Shot
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================
-       SECTION 5 — SHOW A REAL EXAMPLE (INTERACTIVE SIMULATOR)
-       ========================================== -->
-  <section class="section-padding section-dark" id="simulator">
-    <div class="container">
-      <div style="text-align: center; margin-bottom: 2rem;">
-        <span class="eyebrow-yellow" style="color: var(--color-yellow); font-family: var(--font-grotesk); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">FROM BRIEF TO SHOOT</span>
-        <h2 class="text-balance-thai" style="margin-top: 0.75rem;">ลองดู 1 Photoshoot</h2>
-      </div>
-
-      <!-- Interactive Grid Simulator Container -->
-      <div class="simulator-container reveal">
-        
-        <!-- LEFT: INPUT BRIEF (Option pills) -->
-        <div class="sim-sidebar">
-          <div class="sim-title-area">
-            <span class="sim-step-label">STEP 01</span>
-            <h3 style="font-weight: 800; font-size: 1.2rem;">YOU ANSWER</h3>
-            <p style="font-size: 0.75rem; opacity: 0.6; margin-top: 0.25rem; color: rgba(247,243,234,0.6);">ลองคลิกเลือกปุ่มข้อมูลด้านล่างเพื่อเปลี่ยนมู้ดแอนด์โทนของเซ็ต Prompt</p>
-          </div>
-
-          <div class="brief-options">
-            <!-- 1. Product Selection -->
-            <div class="brief-option-group">
-              <label>1. Product / สินค้า</label>
-              <div class="pill-group">
-                <button onclick="selectOption('product', 'blouse', this)" class="pill pill-product active">เสื้อ Blouse สีฟ้า</button>
-                <button onclick="selectOption('product', 'dress', this)" class="pill pill-product">เดรส Satin สีครีม</button>
-              </div>
-            </div>
-
-            <!-- 2. Model Selection -->
-            <div class="brief-option-group">
-              <label>2. Model / นางแบบ</label>
-              <div class="pill-group">
-                <button onclick="selectOption('model', 'thai', this)" class="pill pill-model active">ผู้หญิงไทย อายุ 28</button>
-                <button onclick="selectOption('model', 'korean', this)" class="pill pill-model">นางแบบเกาหลี อายุ 23</button>
-              </div>
-            </div>
-
-            <!-- 3. Location Selection -->
-            <div class="brief-option-group">
-              <label>3. Location / สถานที่</label>
-              <div class="pill-group">
-                <button onclick="selectOption('location', 'cafe', this)" class="pill pill-location active">Minimal Café</button>
-                <button onclick="selectOption('location', 'studio', this)" class="pill pill-location">Concrete Studio</button>
-              </div>
-            </div>
-
-            <!-- 4. Mood & Style Selection -->
-            <div class="brief-option-group">
-              <label>4. Mood & Style / มู้ด & กล้อง</label>
-              <div class="pill-group">
-                <button onclick="selectOption('mood', 'luxury', this)" class="pill pill-mood active">Quiet Luxury, iPhone</button>
-                <button onclick="selectOption('mood', 'edgy', this)" class="pill pill-mood">Street Edgy, Flash</button>
-              </div>
-            </div>
-          </div>
-
-          <!-- Prompt Output Container -->
-          <div class="prompt-box">
-            <div class="prompt-box-header">
-              <span class="label">Sample Generated Prompt</span>
-              <span style="opacity: 0.4; color: var(--color-ivory);">Ready to use</span>
-            </div>
-            <div id="prompt-output-box" class="prompt-text">
-              Analog film fashion photography of a 28yo Thai woman wearing a light blue silk blouse, sitting in a minimal warm-ivory concrete cafe, relaxed quiet luxury mood, iPhone lifestyle camera angle, shot on 35mm, f/2.8 --ar 4:5
-            </div>
-          </div>
-        </div>
-
-        <!-- RIGHT: GENERATES (Photoshoot Grid/Contact Sheet) -->
-        <div class="contact-sheet-area">
-          <!-- Loading Overlay -->
-          <div id="loader" class="sim-loader">
-            <div class="spinner"></div>
-            <span style="font-size: 0.7rem; color: var(--color-yellow); text-transform: uppercase; font-weight: 700; letter-spacing: 0.1em;">
-              Applying parameters...
-            </span>
-          </div>
-
-          <div class="contact-sheet-header">
-            <div>
-              <span class="sim-step-label">STEP 02</span>
-              <h3 style="font-weight: 800; font-size: 1.2rem;">PFL GENERATES</h3>
-            </div>
-            <span class="italic-serif" style="color: var(--color-yellow); font-size: 0.95rem;">A unified photoshoot set</span>
-          </div>
-
-          <!-- Photo Grid -->
-          <div class="contact-sheet-grid">
-            <!-- Shot 01: Wide -->
-            <div class="sheet-item">
-              <div class="sheet-img-wrap">
-                <img id="img-wide" src="images/shot_01.jpg" alt="Wide shot">
-              </div>
-              <div class="sheet-caption">
-                <span>SHOT 01</span>
-                <span>WIDE</span>
-              </div>
-            </div>
-            
-            <!-- Shot 02: Medium -->
-            <div class="sheet-item">
-              <div class="sheet-img-wrap">
-                <img id="img-medium" src="images/shot_02.jpg" alt="Medium shot">
-              </div>
-              <div class="sheet-caption">
-                <span>SHOT 02</span>
-                <span>MEDIUM</span>
-              </div>
-            </div>
-
-            <!-- Shot 03: Close-up -->
-            <div class="sheet-item">
-              <div class="sheet-img-wrap">
-                <img id="img-closeup" src="images/shot_03.jpg" alt="Close-up shot">
-              </div>
-              <div class="sheet-caption">
-                <span>SHOT 03</span>
-                <span>CLOSE-UP</span>
-              </div>
-            </div>
-
-            <!-- Shot 04: Candid -->
-            <div class="sheet-item">
-              <div class="sheet-img-wrap">
-                <img id="img-candid" src="images/shot_04.jpg" alt="Candid shot">
-              </div>
-              <div class="sheet-caption">
-                <span>SHOT 04</span>
-                <span>CANDID</span>
-              </div>
-            </div>
-
-            <!-- Shot 05: Detail -->
-            <div class="sheet-item">
-              <div class="sheet-img-wrap">
-                <img id="img-detail" src="images/shot_05.jpg" alt="Detail shot">
-              </div>
-              <div class="sheet-caption">
-                <span>SHOT 05</span>
-                <span>DETAIL</span>
-              </div>
-            </div>
-
-            <!-- Shot 06: Hero -->
-            <div class="sheet-item">
-              <div class="sheet-img-wrap">
-                <img id="img-hero" src="images/shot_06.jpg" alt="Hero shot">
-              </div>
-              <div class="sheet-caption">
-                <span>SHOT 06</span>
-                <span>HERO</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div style="text-align: center; margin-top: 4rem; padding-top: 2rem; border-top: 1px solid rgba(247, 243, 234, 0.1);">
-        <h3 class="text-balance-thai" style="font-size: 1.8rem; margin-bottom: 0.5rem;">SAME CONCEPT. MORE CONTENT. ✦</h3>
-        <p class="text-balance-thai" style="opacity: 0.8; max-width: 600px; margin: 0 auto;">
-          จาก Photoshoot เดียว สามารถดาวน์โหลดภาพไปนำไปจัดหน้าใช้ต่อได้ทันที ทั้ง Instagram Carousel, Feed, Website, Ads โฆษณา หรือเลย์เอาท์ทำ Lookbook ของร้านค้า
         </p>
       </div>
     </div>

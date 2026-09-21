@@ -815,8 +815,45 @@ header {
 }
 
 /* ==========================================================================
-   SECTION 5 — SHOW A REAL EXAMPLE (INTERACTIVE SIMULATOR)
+   INTERACTIVE SIMULATOR
    ========================================================================== */
+.simulator-bullet-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem 2rem;
+  margin: 1.25rem auto 0;
+  max-width: 820px;
+  padding: 0;
+}
+
+.simulator-bullet-list li {
+  font-size: 0.95rem;
+  color: rgba(247, 243, 234, 0.85);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  line-height: 1.4;
+}
+
+.simulator-bullet-list li::before {
+  content: "✦";
+  color: var(--color-yellow);
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .simulator-bullet-list {
+    flex-direction: column;
+    align-items: flex-start;
+    display: inline-flex;
+    text-align: left;
+    gap: 0.5rem;
+  }
+}
+
 .simulator-container {
   display: grid;
   grid-template-columns: 1fr;
