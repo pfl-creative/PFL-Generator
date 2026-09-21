@@ -311,6 +311,30 @@ header {
   opacity: 0.85;
 }
 
+.hero-bullet-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.hero-bullet-list li {
+  font-size: 1.05rem;
+  color: rgba(32, 32, 32, 0.9);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  line-height: 1.5;
+}
+
+.hero-bullet-list li::before {
+  content: "✦";
+  color: var(--color-coral);
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
 .hero-benefits-grid {
   display: grid;
   grid-template-columns: 1fr;
