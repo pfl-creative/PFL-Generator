@@ -255,9 +255,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Keep track of active parameters
   const selections = {
-    product: 'blouse',
-    model: 'thai',
-    location: 'cafe',
+    product: 'dress',
+    model: 'korean',
+    location: 'studio',
     mood: 'luxury'
   };
 

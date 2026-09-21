@@ -214,8 +214,8 @@
             <div class="brief-option-group">
               <label>1. Product / สินค้า</label>
               <div class="pill-group">
-                <button onclick="selectOption('product', 'blouse', this)" class="pill pill-product active">เสื้อ Blouse สีฟ้า</button>
-                <button onclick="selectOption('product', 'dress', this)" class="pill pill-product">เดรส Satin สีครีม</button>
+                <button onclick="selectOption('product', 'blouse', this)" class="pill pill-product">เสื้อ Blouse สีฟ้า</button>
+                <button onclick="selectOption('product', 'dress', this)" class="pill pill-product active">เดรส Satin สีครีม</button>
               </div>
             </div>
 
@@ -223,8 +223,8 @@
             <div class="brief-option-group">
               <label>2. Model / นางแบบ</label>
               <div class="pill-group">
-                <button onclick="selectOption('model', 'thai', this)" class="pill pill-model active">ผู้หญิงไทย อายุ 28</button>
-                <button onclick="selectOption('model', 'korean', this)" class="pill pill-model">นางแบบเกาหลี อายุ 23</button>
+                <button onclick="selectOption('model', 'thai', this)" class="pill pill-model">ผู้หญิงไทย อายุ 28</button>
+                <button onclick="selectOption('model', 'korean', this)" class="pill pill-model active">นางแบบเกาหลี อายุ 23</button>
               </div>
             </div>
 
@@ -232,8 +232,8 @@
             <div class="brief-option-group">
               <label>3. Location / สถานที่</label>
               <div class="pill-group">
-                <button onclick="selectOption('location', 'cafe', this)" class="pill pill-location active">Minimal Café</button>
-                <button onclick="selectOption('location', 'studio', this)" class="pill pill-location">Concrete Studio</button>
+                <button onclick="selectOption('location', 'cafe', this)" class="pill pill-location">Minimal Café</button>
+                <button onclick="selectOption('location', 'studio', this)" class="pill pill-location active">Concrete Studio</button>
               </div>
             </div>
 
@@ -254,7 +254,7 @@
               <span style="opacity: 0.4; color: var(--color-ivory);">Ready to use</span>
             </div>
             <div id="prompt-output-box" class="prompt-text">
-              Analog film fashion photography of a 28yo Thai woman wearing a light blue silk blouse, sitting in a minimal warm-ivory concrete cafe, relaxed quiet luxury mood, iPhone lifestyle camera angle, shot on 35mm, f/2.8 --ar 4:5
+              Aesthetic profile of a 23yo Korean model in a cream silk dress, bright white sunlit studio with plants, editorial fashion styling --ar 4:5
             </div>
           </div>
         </div>
@@ -282,7 +282,7 @@
             <!-- Shot 01: Wide -->
             <div class="sheet-item">
               <div class="sheet-img-wrap">
-                <img id="img-wide" src="images/shot_01.jpg" alt="Wide shot">
+                <img id="img-wide" src="images/dress_korean_studio_shot_01.jpg" alt="Wide shot">
               </div>
               <div class="sheet-caption">
                 <span>SHOT 01</span>
@@ -293,7 +293,7 @@
             <!-- Shot 02: Medium -->
             <div class="sheet-item">
               <div class="sheet-img-wrap">
-                <img id="img-medium" src="images/shot_02.jpg" alt="Medium shot">
+                <img id="img-medium" src="images/dress_korean_studio_shot_02.jpg" alt="Medium shot">
               </div>
               <div class="sheet-caption">
                 <span>SHOT 02</span>
@@ -304,7 +304,7 @@
             <!-- Shot 03: Close-up -->
             <div class="sheet-item">
               <div class="sheet-img-wrap">
-                <img id="img-closeup" src="images/shot_03.jpg" alt="Close-up shot">
+                <img id="img-closeup" src="images/dress_korean_studio_shot_03.jpg" alt="Close-up shot">
               </div>
               <div class="sheet-caption">
                 <span>SHOT 03</span>
@@ -315,7 +315,7 @@
             <!-- Shot 04: Candid -->
             <div class="sheet-item">
               <div class="sheet-img-wrap">
-                <img id="img-candid" src="images/shot_04.jpg" alt="Candid shot">
+                <img id="img-candid" src="images/dress_korean_studio_shot_04.jpg" alt="Candid shot">
               </div>
               <div class="sheet-caption">
                 <span>SHOT 04</span>
@@ -326,7 +326,7 @@
             <!-- Shot 05: Detail -->
             <div class="sheet-item">
               <div class="sheet-img-wrap">
-                <img id="img-detail" src="images/shot_05.jpg" alt="Detail shot">
+                <img id="img-detail" src="images/dress_korean_studio_shot_05.jpg" alt="Detail shot">
               </div>
               <div class="sheet-caption">
                 <span>SHOT 05</span>
@@ -337,7 +337,7 @@
             <!-- Shot 06: Hero -->
             <div class="sheet-item">
               <div class="sheet-img-wrap">
-                <img id="img-hero" src="images/shot_06.jpg" alt="Hero shot">
+                <img id="img-hero" src="images/dress_korean_studio_shot_06.jpg" alt="Hero shot">
               </div>
               <div class="sheet-caption">
                 <span>SHOT 06</span>
@@ -509,156 +509,6 @@
   </section>
 
   <!-- ==========================================
-       SECTION 4 — HOW IT WORKS
-       ========================================== -->
-  <section class="section-padding" style="background-color: var(--color-ivory);">
-    <div class="container">
-      <div style="text-align: center; margin-bottom: 3rem;">
-        <span class="tagline-badge">HOW IT WORKS</span>
-        <h2 class="text-balance-thai" style="margin-top: 1rem;">จาก Brief สู่ Prompt ทั้งเซ็ต</h2>
-      </div>
-
-      <div class="mechanism-grid reveal">
-        <!-- Step 1 -->
-        <div class="mechanism-card">
-          <div class="mechanism-num">01 / BRIEF</div>
-          <h3 class="text-balance-thai">ตอบคำถามครั้งเดียว</h3>
-          <p class="text-balance-thai">บอกข้อมูลเสื้อผ้าและมู้ดของภาพที่แบรนด์คุณอยากถ่าย:</p>
-          <ul>
-            <li>ชนิดและรายละเอียดสินค้า (Product)</li>
-            <li>ลุคและหน้าตาของแบบ (Model)</li>
-            <li>สถานที่หรือแบ็คกราวด์ (Location)</li>
-            <li>มู้ดแสง สี และสไตล์ภาพ (Mood & Style)</li>
-          </ul>
-        </div>
-
-        <!-- Step 2 -->
-        <div class="mechanism-card">
-          <div class="mechanism-num">02 / BUILD THE SHOOT</div>
-          <h3 class="text-balance-thai"> Generator จัด Prompt</h3>
-          <p class="text-balance-thai">ระบบจะแปลงทิศทางสร้างสรรค์เป็นชุดคำสั่งทันที:</p>
-          <ul>
-            <li>วางชุด Shot ที่หลากหลายเชื่อมโยงกัน</li>
-            <li>คำนวณเลนส์กล้องและทิศทางแสงให้เข้ากัน</li>
-            <li>ใส่คีย์เวิร์ดควบคุมใบหน้านางแบบให้เสถียร</li>
-            <li>แยกเป็น WIDE, MEDIUM, CLOSE-UP, DETAIL</li>
-          </ul>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="mechanism-card">
-          <div class="mechanism-num">03 / GENERATE</div>
-          <h3 class="text-balance-thai">รันภาพแฟชั่นคุมโทน</h3>
-          <p class="text-balance-thai">นำชุด Prompt ที่จัดไว้ไปกดปุ่มรันภาพได้เลย:</p>
-          <ul>
-            <li>ใช้คู่กับ AI Workflow ที่เราแนะนำ</li>
-            <li>สร้างภาพหลายมุมคุม Mood&Tone เดียวกัน</li>
-            <li>เลือกเซฟภาพที่สวยที่สุดไปใช้งาน</li>
-            <li>ได้ Content พร้อมโพสต์ในไม่กี่นาที</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="mechanism-summary reveal">
-        <h3 class="text-balance-thai" style="font-size: 1.5rem; margin-bottom: 0.5rem;">
-          1 BRIEF → MULTIPLE PROMPTS → A WHOLE SHOOT ✦
-        </h3>
-        <p class="italic-serif" style="color: var(--color-coral); font-weight: 600;">
-          ไม่ต้องเริ่มเขียนใหม่ทีละ Shot
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================
-       SECTION 6 — WHY A SET IS MORE USEFUL THAN ONE IMAGE
-       ========================================== -->
-  <section class="section-padding" style="background-color: var(--color-ivory);">
-    <div class="container">
-      <div style="max-width: 700px; margin-bottom: 3rem;">
-        <span class="tagline-badge">WHY A SET MATTERS</span>
-        <h2 class="text-balance-thai" style="margin-top: 1rem;">
-          เพราะแบรนด์ไม่ได้ต้องการ<br>
-          แค่ "รูปสวย 1 รูป"
-        </h2>
-        <p class="text-balance-thai" style="margin-top: 0.75rem; font-size: 1.25rem; font-weight: 500; color: var(--color-coral)">
-          แต่ต้องการ Content ที่ใช้ไปด้วยกันได้
-        </p>
-      </div>
-
-      <div class="benefit-use-grid reveal">
-        <!-- Case 1 -->
-        <div class="use-case-card">
-          <div>
-            <h3>INSTAGRAM CAROUSEL <span>01 / SOCIAL</span></h3>
-            <p style="font-size: 0.95rem; opacity: 0.8; margin-top: 0.5rem; margin-bottom: 1.25rem;">ลงโพสต์สไลด์ปัดขวาเล่าเรื่องคอลเลกชันได้น่าสนใจและมียอดแชร์สูงขึ้น</p>
-          </div>
-          <div class="use-case-flow">
-            <span>Hero Cover</span>
-            <span class="arrow">→</span>
-            <span>Lifestyle View</span>
-            <span class="arrow">→</span>
-            <span>Close-up Shot</span>
-            <span class="arrow">→</span>
-            <span>Fabric Detail</span>
-          </div>
-        </div>
-
-        <!-- Case 2 -->
-        <div class="use-case-card">
-          <div>
-            <h3>WEBSITE LAYOUT <span>02 / STOREFRONT</span></h3>
-            <p style="font-size: 0.95rem; opacity: 0.8; margin-top: 0.5rem; margin-bottom: 1.25rem;">จัดวางภาพบนหน้าร้านค้าออนไลน์หรือแบนเนอร์หลักให้ดูเป็นมืออาชีพ</p>
-          </div>
-          <div class="use-case-flow">
-            <span>Hero Cover Banner</span>
-            <span class="arrow">→</span>
-            <span>Product Catalog</span>
-            <span class="arrow">→</span>
-            <span>Texture Detail</span>
-          </div>
-        </div>
-
-        <!-- Case 3 -->
-        <div class="use-case-card">
-          <div>
-            <h3>CAMPAIGN PROMOTION <span>03 / ADS</span></h3>
-            <p style="font-size: 0.95rem; opacity: 0.8; margin-top: 0.5rem; margin-bottom: 1.25rem;">ยิงแอดโฆษณาด้วยรูปที่หลากหลายดึงความสนใจหลายระดับ</p>
-          </div>
-          <div class="use-case-flow">
-            <span>Wide Angle View</span>
-            <span class="arrow">→</span>
-            <span>Portrait Face</span>
-            <span class="arrow">→</span>
-            <span>Candid Dynamic Pose</span>
-          </div>
-        </div>
-
-        <!-- Case 4 -->
-        <div class="use-case-card">
-          <div>
-            <h3>DIGITAL LOOKBOOK <span>04 / BRAND BOOK</span></h3>
-            <p style="font-size: 0.95rem; opacity: 0.8; margin-top: 0.5rem; margin-bottom: 1.25rem;">สร้างหน้าโบรชัวร์แฟชั่นคุมธีมเสื้อผ้าเซ็ตใหญ่ลงขายส่งหรือแสดงผลงาน</p>
-          </div>
-          <div class="use-case-flow">
-            <span>Full Body Fit</span>
-            <span class="arrow">→</span>
-            <span>Medium Angle Shot</span>
-            <span class="arrow">→</span>
-            <span>Stitch Detail</span>
-          </div>
-        </div>
-      </div>
-
-      <div style="text-align: center; margin-top: 4rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-        <p class="text-balance-thai" style="font-weight: 500;">
-          Photoshoot Workflow ช่วยให้คุณคิด Content เป็นชุดตั้งแต่ต้น แทนที่จะนั่งคอยนั่งไล่ Generate รูปสวยแบบสะเปะสะปะ แยกกันไปเรื่อย ๆ โดยมองไม่เห็นภาพรวมของร้าน
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================
        SECTION 7 — REALISM MATTERS
        ========================================== -->
   <section class="section-padding" style="background-color: var(--color-white); border-top: 1px solid rgba(32,32,32,0.08);">
@@ -741,28 +591,7 @@
         </div>
       </div>
 
-      <div style="text-align: center;">
-        <h2 class="italic-serif" style="font-size: clamp(1.8rem, 4.5vw, 2.5rem); letter-spacing: 0.05em; color: var(--color-black);">
-          LESS PROMPTING. MORE CREATING. ✦
-        </h2>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================
-       SECTION 9 — MADE FOR FASHION BRANDS
-       ========================================== -->
-  <section class="section-padding" style="background-color: var(--color-ivory); border-top: 1px solid rgba(32,32,32,0.08);">
-    <div class="container">
-      <div style="max-width: 750px; margin-bottom: 2rem;">
-        <span class="tagline-badge">MADE FOR FASHION</span>
-        <h2 class="text-balance-thai" style="margin-top: 1rem;">
-          ไม่ได้สร้างมาเพื่อ Generate รูปอะไรก็ได้<br>
-          <span style="color: var(--color-coral)">แต่คิดมาเพื่อ Fashion Content</span>
-        </h2>
-      </div>
-
-      <div class="categories-grid reveal">
+      <div class="categories-grid reveal" style="margin: 3.5rem 0;">
         <!-- 1 Studio -->
         <div class="category-card">
           <img src="images/sheet_studio.jpg" alt="STUDIO PHOTO">
@@ -805,13 +634,10 @@
         </div>
       </div>
 
-      <div style="margin-top: 4rem; padding-top: 2rem; border-top: 1px dashed rgba(32,32,32,0.2);">
-        <p class="text-balance-thai" style="font-weight: 500; font-size: 1.1rem; line-height: 1.7;">
-          เพราะภาพถ่ายแบบแฟชั่นของร้าน ไม่ได้ต้องการแค่ส่งคำสั่งว่า "นางแบบใส่เสื้อยืด" แต่มันขึ้นอยู่กับองค์ประกอบยิบย่อยที่มีมิติความงาม เช่น มุมมองเลนส์ (Camera Angle), ท่าโพส (Pose), การจัดวางเฟรม (Composition), ดีเทลงานฝีเข็มของเนื้อผ้า (Fabric Detail), ทิศทางมองกล้อง (Model Direction), ทิศแสงธรรมชาติ (Lighting), วิวสภาพแวดล้อม (Location) และอารมณ์ความเก๋ (Mood & Tone)
-        </p>
-        <p class="text-balance-thai" style="margin-top: 1rem; opacity: 0.8;">
-          ซึ่งตัว PFL Photoshoot Generator จะช่วยจัดการโครงสร้างข้อมูลภาพทั้งหมดเหล่านั้นมารวมกัน เพื่อสร้างทิศทางการ Brief ภาพถ่ายเสื้อผ้าของแบรนด์คุณให้ง่าย สมบูรณ์ และมีระบบขึ้นโดยทันที
-        </p>
+      <div style="text-align: center;">
+        <h2 class="italic-serif" style="font-size: clamp(1.8rem, 4.5vw, 2.5rem); letter-spacing: 0.05em; color: var(--color-black);">
+          LESS PROMPTING. MORE CREATING. ✦
+        </h2>
       </div>
     </div>
   </section>
