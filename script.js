@@ -253,6 +253,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  // Analytics tracking helper
+  window.trackEvent = function(eventName, params = {}) {
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', eventName, params);
+    }
+    console.log(`[Event Tracked] ${eventName}`, params);
+  };
+
   // Keep track of active parameters
   const selections = {
     product: 'dress',
@@ -261,10 +269,17 @@ document.addEventListener('DOMContentLoaded', () => {
     mood: 'luxury'
   };
 
+  let hasTrackedDemoStart = false;
+
   // Function to handle parameter toggling
   window.selectOption = function(category, value, element) {
     if (selections[category] === value) return; // Ignore if clicking already active
     
+    if (!hasTrackedDemoStart) {
+      window.trackEvent('demo_start', { category, value });
+      hasTrackedDemoStart = true;
+    }
+
     selections[category] = value;
 
     // Update pill states visually
@@ -283,6 +298,12 @@ document.addEventListener('DOMContentLoaded', () => {
       if (loader) {
         loader.classList.remove('active');
       }
+      window.trackEvent('demo_complete', {
+        product: selections.product,
+        model: selections.model,
+        location: selections.location,
+        mood: selections.mood
+      });
     }, 350);
   };
 
@@ -315,8 +336,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Checkout redirect logic
-  window.checkout = function(plan) {
+  // Smooth scroll to simulator from Hero CTA
+  window.scrollToDemo = function(event) {
+    if (event) event.preventDefault();
+    window.trackEvent('hero_demo_click');
+    const simSection = document.getElementById('simulator');
+    if (simSection) {
+      simSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // Checkout redirect logic with source tracking
+  window.checkout = function(source = 'general') {
+    if (source === 'demo') {
+      window.trackEvent('demo_buy_click');
+    } else if (source === 'proof') {
+      window.trackEvent('proof_buy_click');
+    }
+    window.trackEvent('checkout_start', { source });
     // Lead directly to Stripe checkout
     window.location.href = 'https://buy.stripe.com/7sYbJ10VP1DbcYV2BhcIE03';
   };
