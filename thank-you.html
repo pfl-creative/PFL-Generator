@@ -17,92 +17,502 @@
   
   <!-- Vanilla CSS Style Sheet -->
   <link rel="stylesheet" href="styles.css">
+
+  <style>
+    /* Critical Self-Contained Styles for Thank You Page */
+    :root {
+      --color-ivory: #F7F3EA;
+      --color-black: #202020;
+      --color-yellow: #F3E36C;
+      --color-coral: #F16B55;
+      --color-white: #FFFFFF;
+      --font-grotesk: 'Space Grotesk', 'Prompt', sans-serif;
+      --font-serif: 'Cormorant Garamond', 'Prompt', serif;
+      --font-thai: 'Prompt', sans-serif;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body.thankyou-body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-color: var(--color-ivory);
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-thai);
+      color: var(--color-black);
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    .thankyou-header {
+      border-bottom: 1px solid rgba(32, 32, 32, 0.1);
+      background-color: var(--color-ivory);
+      padding: 1.15rem 0;
+      width: 100%;
+    }
+
+    .thankyou-header .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .thankyou-header .logo {
+      font-family: var(--font-grotesk);
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.03em;
+      text-decoration: none;
+      color: var(--color-black);
+    }
+
+    .thankyou-header .logo span {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .thankyou-header .brand-badge {
+      font-family: var(--font-grotesk);
+      font-size: 0.72rem;
+      font-weight: 700;
+      background-color: var(--color-black);
+      color: var(--color-ivory);
+      padding: 0.3rem 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      white-space: nowrap;
+    }
+
+    .thankyou-main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      padding: 2.5rem 0 3.5rem;
+      width: 100%;
+    }
+
+    .thankyou-card {
+      max-width: 520px;
+      width: 100%;
+      min-width: 0;
+      margin: 0 auto;
+      background-color: var(--color-white);
+      border: 2px solid var(--color-black);
+      box-shadow: 6px 6px 0 var(--color-black);
+      padding: 2.5rem 1.75rem;
+      text-align: center;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .thankyou-status-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.65rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .thankyou-icon-circle {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      background-color: #F0FDF4;
+      border: 2px solid #16A34A;
+      color: #16A34A;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: 800;
+      box-shadow: 2px 2px 0 var(--color-black);
+    }
+
+    .thankyou-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-family: var(--font-thai);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #15803D;
+      background-color: #DCFCE7;
+      border: 1px solid #86EFAC;
+      padding: 0.25rem 0.85rem;
+      border-radius: 9999px;
+      letter-spacing: 0.02em;
+    }
+
+    .thankyou-title {
+      font-family: var(--font-thai);
+      font-size: clamp(1.35rem, 4.5vw, 1.75rem);
+      font-weight: 700;
+      color: var(--color-black);
+      margin: 0 0 0.4rem;
+      line-height: 1.3;
+      word-break: break-word;
+    }
+
+    .thankyou-product-badge {
+      display: inline-block;
+      font-family: var(--font-grotesk);
+      font-size: 0.92rem;
+      font-weight: 800;
+      color: var(--color-black);
+      background-color: var(--color-yellow);
+      padding: 0.25rem 0.75rem;
+      border: 1.5px solid var(--color-black);
+      box-shadow: 2px 2px 0 var(--color-black);
+      margin-bottom: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .thankyou-reassurance {
+      font-size: 0.98rem;
+      color: rgba(32, 32, 32, 0.85);
+      line-height: 1.6;
+      margin: 0 0 1.25rem;
+      word-break: break-word;
+    }
+
+    .delivery-highlight-box {
+      background-color: #FFFDF9;
+      border: 2px solid var(--color-black);
+      box-shadow: 4px 4px 0 var(--color-coral);
+      padding: 1.35rem 1.15rem;
+      margin: 1.25rem 0;
+      text-align: center;
+      box-sizing: border-box;
+      min-width: 0;
+    }
+
+    .delivery-badge-tag {
+      display: inline-block;
+      font-family: var(--font-grotesk);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      background-color: var(--color-coral);
+      color: var(--color-white);
+      padding: 0.2rem 0.55rem;
+      border: 1.5px solid var(--color-black);
+      margin-bottom: 0.65rem;
+    }
+
+    .delivery-headline {
+      font-family: var(--font-thai);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--color-black);
+      line-height: 1.5;
+      margin: 0 0 0.45rem;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
+
+    .delivery-headline strong {
+      color: var(--color-black);
+      background: linear-gradient(180deg, transparent 60%, rgba(243, 227, 108, 0.75) 60%);
+      padding: 0 0.2rem;
+    }
+
+    .delivery-subline {
+      font-size: 0.84rem;
+      color: rgba(32, 32, 32, 0.65);
+      line-height: 1.4;
+      margin: 0;
+      word-break: break-word;
+    }
+
+    .thankyou-divider {
+      border: 0;
+      border-top: 1px dashed rgba(32, 32, 32, 0.18);
+      margin: 1.4rem 0;
+    }
+
+    .thankyou-en-section {
+      text-align: center;
+      font-size: 0.9rem;
+      line-height: 1.55;
+      color: rgba(32, 32, 32, 0.75);
+      word-break: break-word;
+    }
+
+    .thankyou-en-section .en-title {
+      font-family: var(--font-grotesk);
+      font-weight: 700;
+      color: var(--color-black);
+      font-size: 0.95rem;
+      margin: 0 0 0.3rem;
+    }
+
+    .thankyou-en-section .en-desc {
+      margin: 0 0 0.3rem;
+      color: rgba(32, 32, 32, 0.8);
+    }
+
+    .thankyou-en-section .en-desc strong {
+      color: var(--color-black);
+      font-weight: 700;
+    }
+
+    .thankyou-en-section .en-sub {
+      font-size: 0.82rem;
+      color: rgba(32, 32, 32, 0.55);
+      margin: 0;
+    }
+
+    .thankyou-help-box {
+      background-color: rgba(32, 32, 32, 0.03);
+      border: 1px solid rgba(32, 32, 32, 0.12);
+      border-radius: 4px;
+      padding: 1.15rem 1.25rem;
+      text-align: left;
+      margin: 1.4rem 0;
+      box-sizing: border-box;
+      min-width: 0;
+    }
+
+    .help-box-header {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.92rem;
+      color: var(--color-black);
+      margin-bottom: 0.4rem;
+    }
+
+    .help-box-header strong {
+      font-weight: 700;
+    }
+
+    .thankyou-help-box p {
+      font-size: 0.88rem;
+      color: rgba(32, 32, 32, 0.8);
+      line-height: 1.55;
+      margin: 0;
+      word-break: break-word;
+    }
+
+    .thankyou-help-box p + p {
+      margin-top: 0.35rem;
+    }
+
+    .thankyou-cta-wrap {
+      margin-top: 1.4rem;
+    }
+
+    .btn-thankyou-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 320px;
+      width: 100%;
+      margin: 0 auto;
+      font-family: var(--font-thai);
+      font-size: 0.95rem;
+      font-weight: 600;
+      padding: 0.85rem 1.75rem;
+      border: 2px solid var(--color-black);
+      background-color: transparent;
+      color: var(--color-black);
+      text-decoration: none;
+      box-shadow: 3px 3px 0 var(--color-black);
+      transition: all 0.2s ease-out;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+
+    .btn-thankyou-secondary:hover {
+      background-color: var(--color-black);
+      color: var(--color-ivory);
+      box-shadow: 0 0 0 transparent;
+      transform: translateY(2px);
+    }
+
+    .thankyou-footer {
+      border-top: 1px solid rgba(32, 32, 32, 0.08);
+      padding: 1.5rem 0;
+      background-color: var(--color-ivory);
+      width: 100%;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .thankyou-header {
+        padding: 0.85rem 0;
+      }
+
+      .thankyou-header .logo {
+        font-size: 1.05rem;
+      }
+
+      .thankyou-header .brand-badge {
+        font-size: 0.65rem;
+        padding: 0.2rem 0.5rem;
+      }
+
+      .thankyou-main {
+        padding: 1.25rem 0 2rem;
+      }
+
+      .thankyou-card {
+        padding: 1.5rem 1.15rem;
+        box-shadow: 4px 4px 0 var(--color-black);
+      }
+
+      .thankyou-status-wrap {
+        margin-bottom: 0.85rem;
+        gap: 0.5rem;
+      }
+
+      .thankyou-icon-circle {
+        width: 44px;
+        height: 44px;
+        font-size: 1.25rem;
+      }
+
+      .thankyou-title {
+        font-size: 1.3rem;
+      }
+
+      .thankyou-product-badge {
+        font-size: 0.85rem;
+        padding: 0.2rem 0.6rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .thankyou-reassurance {
+        font-size: 0.9rem;
+        margin-bottom: 0.85rem;
+      }
+
+      .delivery-highlight-box {
+        padding: 1.1rem 0.9rem;
+        margin: 0.85rem 0;
+        box-shadow: 3px 3px 0 var(--color-coral);
+      }
+
+      .delivery-headline {
+        font-size: 1.02rem;
+        line-height: 1.45;
+      }
+
+      .delivery-subline {
+        font-size: 0.78rem;
+      }
+
+      .thankyou-divider {
+        margin: 1.15rem 0;
+      }
+
+      .thankyou-en-section {
+        font-size: 0.84rem;
+      }
+
+      .thankyou-help-box {
+        padding: 0.95rem 1rem;
+        margin: 1.15rem 0;
+      }
+
+      .thankyou-help-box p {
+        font-size: 0.82rem;
+      }
+
+      .btn-thankyou-secondary {
+        max-width: 100%;
+        padding: 0.8rem 1.25rem;
+        font-size: 0.92rem;
+      }
+    }
+  </style>
 </head>
 <body class="thankyou-body">
 
-  <!-- ==========================================
-       HEADER / NAVIGATION
-       ========================================== -->
-  <header>
+  <header class="thankyou-header">
     <div class="container header-container">
-      <a href="index.html" class="logo">
+      <a href="http://promptfashionlab.com/" class="logo">
         PROMPT FASHION <span>LAB</span>
       </a>
       <div class="brand-badge">PFL ✦ STUDIO</div>
     </div>
   </header>
 
-  <!-- ==========================================
-       THANK YOU MAIN CONTENT
-       ========================================== -->
-  <main class="thankyou-wrapper">
-    <div class="thankyou-card">
-      
-      <!-- Success Icon & Status -->
-      <div class="thankyou-status-wrap">
-        <div class="thankyou-icon-circle" aria-label="Success checkmark">✓</div>
-        <div class="thankyou-status-pill">ชำระเงินสำเร็จ ✓</div>
-      </div>
-
-      <!-- Main Headline -->
-      <h1 class="thankyou-title">ขอบคุณสำหรับการสั่งซื้อ 🤍</h1>
-
-      <!-- Product Name -->
-      <div class="thankyou-product-badge">PFL Photoshoot Generator</div>
-
-      <!-- Warm Reassurance -->
-      <p class="thankyou-reassurance">
-        ขอบคุณที่เลือก Prompt Fashion Lab<br>
-        เราได้รับคำสั่งซื้อของคุณเรียบร้อยแล้ว
-      </p>
-
-      <!-- Prominent Delivery Box (Mobile-first priority) -->
-      <div class="delivery-highlight-box">
-        <div class="delivery-badge-tag">✦ DELIVERY NOTICE</div>
-        <p class="delivery-headline">
-          สินค้าจะส่งถึงคุณทางอีเมลที่ได้แจ้งไว้<br>ภายใน <strong>15–20 นาที</strong>
-        </p>
-        <p class="delivery-subline">
-          Please check the email address you provided during checkout.
-        </p>
-      </div>
-
-      <hr class="thankyou-divider">
-
-      <!-- English Section -->
-      <div class="thankyou-en-section">
-        <p class="en-title">Thank you for your purchase.</p>
-        <p class="en-desc">
-          Your <strong>PFL Photoshoot Generator</strong> will be delivered via email within <strong>15–20 minutes</strong>.
-        </p>
-        <p class="en-sub">
-          Please check the email address you provided during checkout.
-        </p>
-      </div>
-
-      <hr class="thankyou-divider">
-
-      <!-- Small Help Box -->
-      <div class="thankyou-help-box">
-        <div class="help-box-header">
-          <span class="help-icon">💡</span>
-          <strong>ยังไม่ได้รับอีเมล?</strong>
+  <main class="thankyou-main">
+    <div class="container">
+      <div class="thankyou-card">
+        
+        <!-- Success Icon & Status -->
+        <div class="thankyou-status-wrap">
+          <div class="thankyou-icon-circle" aria-label="Success checkmark">✓</div>
+          <div class="thankyou-status-pill">ชำระเงินสำเร็จ ✓</div>
         </div>
-        <p>หากเกิน 20 นาทีแล้วยังไม่ได้รับอีเมล กรุณาตรวจสอบ <strong>Spam / Junk Mail</strong> ก่อน</p>
-        <p>หากยังไม่พบ สามารถติดต่อ Prompt Fashion Lab เพื่อให้เราช่วยตรวจสอบคำสั่งซื้อให้ค่ะ</p>
-      </div>
 
-      <!-- Simple Secondary CTA -->
-      <div class="thankyou-cta-wrap">
-        <a href="http://promptfashionlab.com/" class="btn-thankyou-secondary">กลับไปที่ Prompt Fashion Lab</a>
-      </div>
+        <!-- Main Headline -->
+        <h1 class="thankyou-title">ขอบคุณสำหรับการสั่งซื้อ 🤍</h1>
 
+        <!-- Product Name -->
+        <div class="thankyou-product-badge">PFL Photoshoot Generator</div>
+
+        <!-- Warm Reassurance -->
+        <p class="thankyou-reassurance">
+          ขอบคุณที่เลือก Prompt Fashion Lab<br>
+          เราได้รับคำสั่งซื้อของคุณเรียบร้อยแล้ว
+        </p>
+
+        <!-- Prominent Delivery Box (Mobile-first priority) -->
+        <div class="delivery-highlight-box">
+          <div class="delivery-badge-tag">✦ DELIVERY NOTICE</div>
+          <p class="delivery-headline">
+            สินค้าจะส่งถึงคุณทางอีเมลที่ได้แจ้งไว้<br>ภายใน <strong>15–20 นาที</strong>
+          </p>
+          <p class="delivery-subline">
+            Please check the email address you provided during checkout.
+          </p>
+        </div>
+
+        <hr class="thankyou-divider">
+
+        <!-- English Section -->
+        <div class="thankyou-en-section">
+          <p class="en-title">Thank you for your purchase.</p>
+          <p class="en-desc">
+            Your <strong>PFL Photoshoot Generator</strong> will be delivered via email within <strong>15–20 minutes</strong>.
+          </p>
+          <p class="en-sub">
+            Please check the email address you provided during checkout.
+          </p>
+        </div>
+
+        <hr class="thankyou-divider">
+
+        <!-- Small Help Box -->
+        <div class="thankyou-help-box">
+          <div class="help-box-header">
+            <span class="help-icon">💡</span>
+            <strong>ยังไม่ได้รับอีเมล?</strong>
+          </div>
+          <p>หากเกิน 20 นาทีแล้วยังไม่ได้รับอีเมล กรุณาตรวจสอบ <strong>Spam / Junk Mail</strong> ก่อน</p>
+          <p>หากยังไม่พบ สามารถติดต่อ Prompt Fashion Lab เพื่อให้เราช่วยตรวจสอบคำสั่งซื้อให้ค่ะ</p>
+        </div>
+
+        <!-- Simple Secondary CTA -->
+        <div class="thankyou-cta-wrap">
+          <a href="http://promptfashionlab.com/" class="btn-thankyou-secondary">กลับไปที่ Prompt Fashion Lab</a>
+        </div>
+
+      </div>
     </div>
   </main>
 
-  <!-- ==========================================
-       FOOTER
-       ========================================== -->
   <footer class="thankyou-footer">
     <div class="container footer-container">
       <div class="footer-copy">
